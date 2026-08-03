@@ -35,14 +35,14 @@
   <section class="section" style="padding-top:32px;">
     <div class="container">
       <div class="breadcrumbs"><a href="index.html">Home</a> <span>/</span> Shop</div>
-      <p class="section-title">SHOP</p>
-      <h1 class="section-heading">Shop All Blooms</h1>
-      <p class="section-subtitle">Handcrafted pipe cleaner flowers made in Jaipur, India. Flowers that never fade.</p>
+      <p class="section-title">THE COLLECTION</p>
+      <h1 class="section-heading">All Products</h1>
+      <p class="section-subtitle">Handwoven velvet blooms on poseable wire stems. All prices inclusive of GST.</p>
       <div style="display:flex;gap:12px;justify-content:center;margin-bottom:32px;flex-wrap:wrap;">
-        <button class="btn btn-cta btn-small" onclick="filterProducts('all')">All</button>
-        <button class="btn btn-outline btn-small" onclick="filterProducts('single_flower')">Single Flowers</button>
-        <button class="btn btn-outline btn-small" onclick="filterProducts('bouquet')">Bouquets</button>
+        <button class="btn btn-cta btn-small" onclick="filterProducts('all')">All Products</button>
         <button class="btn btn-outline btn-small" onclick="filterProducts('pots')">Pots</button>
+        <button class="btn btn-outline btn-small" onclick="filterProducts('single_flower')">Single Flower</button>
+        <button class="btn btn-outline btn-small" onclick="filterProducts('bouquet')">Bouquet</button>
         <button class="btn btn-outline btn-small" onclick="filterProducts('keychains')">Keychains</button>
       </div>
       <div class="product-grid" id="shop-products"></div>
@@ -113,7 +113,7 @@
     function filterProducts(cat) {
       currentFilter = cat;
       renderProducts('shop-products', cat);
-      document.querySelectorAll('.btn-small').forEach(b => { b.classList.remove('btn-cta'); b.classList.add('btn-outline'); });
+      document.querySelectorAll('.btn-small').forEach(b => { b.classList.remove('btn-cta'); b.classList.add('btn-outline'); b.style.background=''; b.style.borderColor=''; b.style.color=''; });
       event.target.classList.add('btn-cta'); event.target.classList.remove('btn-outline');
     }
     document.addEventListener('DOMContentLoaded', () => {
