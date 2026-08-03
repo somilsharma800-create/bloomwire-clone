@@ -4,138 +4,475 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Creator Program | BloomWire</title>
-  <meta name="description" content="BloomWire — Handcrafted pipe cleaner flowers from Jaipur. Flowers that never fade.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c86d51' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='3'/><path d='M12 2c-2 2-2 4 0 6 2-2 2-4 0-6zM12 22c-2-2-2-4 0-6 2 2 2 4 0 6zM2 12c2-2 4-2 6 0-2 2-4 2-6 0zM22 12c-2-2-4-2-6 0 2 2 4 2 6 0zM5 5c-1 2 0 4 2 4 1-2 0-4-2-4zM19 19c-1-2 0-4 2-4 1 2 0 4-2 4zM19 5c1 2 0 4-2 4-1-2 0-4 2-4zM5 19c1-2 0-4-2-4-1 2 0 4 2 4z'/></svg>">
+  <meta name="description" content="Join the BloomWire Creator Family — free monthly blooms, 10% commission, early access and features. For stylists, content creators and gift enthusiasts who love everlasting flowers.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><circle cx='12' cy='12' r='10' fill='%23c86d51'/></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..800;1,400..800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-</head><body>
-<div class="announcement">FREE SHIPPING ON ORDERS ABOVE ₹499 · HANDCRAFTED IN JAIPUR</div>
-  <header class="header">
-    <div class="header-inner">
-      <a href="index.html" class="logo">BloomWire</a>
-      <nav class="nav-links">
-        <div class="nav-dropdown"><a href="shop.html">Shop ▾</a><div class="dropdown-menu"><a href="shop.html?category=single_flower">Single Flowers</a><a href="shop.html?category=bouquet">Bouquets</a><a href="shop.html?category=pots">Pots</a><a href="shop.html?category=keychains">Keychains</a></div></div>
-        <a href="gift-sets.html">Gift Sets</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="rewards.html">Rewards</a>
-        <a href="creator-program.html">Creator Program</a>
-      </nav>
-      <div class="nav-icons">
-        <a href="shop.html" title="Search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></a>
-        <a href="rewards.html" title="Petals"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2c-2 2-2 4 0 6 2-2 2-4 0-6zM12 22c-2-2-2-4 0-6 2 2 2 4 0 6zM2 12c2-2 4-2 6 0-2 2-4 2-6 0zM22 12c-2-2-4-2-6 0 2 2 4 2 6 0zM5 5c-1 2 0 4 2 4 1-2 0-4-2-4zM19 19c-1-2 0-4 2-4 1 2 0 4-2 4zM19 5c1 2 0 4-2 4-1-2 0-4 2-4zM5 19c1-2 0-4-2-4-1 2 0 4 2 4z"/></svg></a>
-        <a href="wishlist.html" title="Wishlist"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg> <span class="wishlist-count" style="display:none;">0</span></a>
-        <a href="cart.html" title="Cart" data-open-cart><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg> <span class="cart-count" style="display:none;">0</span></a>
-        <a href="#" title="Account" onclick="event.preventDefault();showToast('Login coming soon!')"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 0 0-16 0"/></svg></a>
-        <button class="hamburger" aria-label="Toggle navigation"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg></button>
-      </div>
-    </div>
-  </header>
-  <section class="section" style="padding-top:48px;background:var(--cream);">
-    <div class="container">
-      <p class="section-title">BLOOMWIRE CREATORS</p>
-      <h1 class="section-heading">Join the BloomWire Creator Family</h1>
-      <p class="section-subtitle">For stylists, content creators and gift enthusiasts who love everlasting blooms. Get free flowers, earn on every referral and be featured across our channels.</p>
-      <div class="creator-benefits" style="max-width:900px;margin:0 auto 48px;">
-        <div class="creator-benefit"><div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2c-2 2-2 4 0 6 2-2 2-4 0-6zM12 22c-2-2-2-4 0-6 2 2 2 4 0 6zM2 12c2-2 4-2 6 0-2 2-4 2-6 0zM22 12c-2-2-4-2-6 0 2 2 4 2 6 0zM5 5c-1 2 0 4 2 4 1-2 0-4-2-4zM19 19c-1-2 0-4 2-4 1 2 0 4-2 4zM19 5c1 2 0 4-2 4-1-2 0-4 2-4zM5 19c1-2 0-4-2-4-1 2 0 4 2 4z"/></svg></div><h4>Free monthly bloom</h4><p>A new piece to style and share each month.</p></div>
-        <div class="creator-benefit"><div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 6v12M9 9.5c0-1.38 1.34-2 3-2s3 .62 3 2-1.34 2-3 2-3 .62-3 2 1.34 2 3 2 3-.62 3-2"/></svg></div><h4>10% creator commission</h4><p>Earn on every order via your code.</p></div>
-        <div class="creator-benefit"><div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8Z"/></svg></div><h4>Early access</h4><p>Stock new collections before they go live.</p></div>
-        <div class="creator-benefit"><div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M5.6 18.4l2.8-2.8M15.6 8.4l2.8-2.8"/></svg></div><h4>Get featured</h4><p>Your content highlighted across our channels.</p></div>
-      </div>
-      <div style="max-width:600px;margin:0 auto;background:white;padding:32px;border-radius:var(--radius);border:1px solid hsl(var(--border));">
-        <h3 style="font-family:var(--font-heading);font-size:22px;margin-bottom:16px;text-align:center;">Apply to Join the Creator Family</h3>
-        <form onsubmit="event.preventDefault();showToast('Application submitted! We will review and get back to you within 5 days');this.reset();">
-          <div class="form-row">
-            <div class="form-group"><label>Name *</label><input type="text" required placeholder="Your name"></div>
-            <div class="form-group"><label>Instagram *</label><input type="text" required placeholder="@yourhandle"></div>
-          </div>
-          <div class="form-row">
-            <div class="form-group"><label>Email *</label><input type="email" required placeholder="you@example.com"></div>
-            <div class="form-group"><label>Followers</label><input type="text" placeholder="e.g. 5K, 10K"></div>
-          </div>
-          <div class="form-group"><label>Why do you love BloomWire?</label><textarea rows="4" placeholder="Tell us why you'd be a great creator..."></textarea></div>
-          <button type="submit" class="btn btn-cta btn-full">Apply to Join</button>
-        </form>
-      </div>
-    </div>
-  </section><footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <h3>BloomWire <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2c-2 2-2 4 0 6 2-2 2-4 0-6zM12 22c-2-2-2-4 0-6 2 2 2 4 0 6zM2 12c2-2 4-2 6 0-2 2-4 2-6 0zM22 12c-2-2-4-2-6 0 2 2 4 2 6 0zM5 5c-1 2 0 4 2 4 1-2 0-4-2-4zM19 19c-1-2 0-4 2-4 1 2 0 4-2 4zM19 5c1 2 0 4-2 4-1-2 0-4 2-4zM5 19c1-2 0-4-2-4-1 2 0 4 2 4z"/></svg></h3>
-          <p>Handcrafted pipe cleaner flowers made with love in Jaipur, Rajasthan, India.</p>
-          <div class="footer-social">
-            <a href="https://wa.me/916367532123" target="_blank" aria-label="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.01 2C6.49 2 2.02 6.47 2.02 11.99c0 1.76.46 3.48 1.34 4.99L2 22l5.13-1.34a9.96 9.96 0 0 0 4.87 1.27h.01c5.52 0 9.99-4.47 9.99-9.99 0-2.67-1.04-5.18-2.92-7.06A9.96 9.96 0 0 0 12.01 2Zm5.8 14.16c-.25.69-1.45 1.32-2 1.4-.51.08-1.16.11-1.87-.12-.43-.14-.99-.32-1.7-.63-2.98-1.29-4.93-4.29-5.08-4.49-.15-.2-1.22-1.62-1.22-3.09 0-1.47.77-2.19 1.05-2.49.27-.3.59-.37.79-.37l.57.01c.18 0 .43-.07.67.51.25.69.85 2.38.92 2.55.07.17.12.37.02.57-.09.2-.14.32-.27.49-.14.17-.29.38-.41.51-.14.14-.28.29-.12.57.16.27.72 1.19 1.54 1.92 1.06.94 1.95 1.23 2.22 1.37.27.14.43.12.59-.07.16-.2.67-.78.85-1.05.18-.27.36-.22.61-.13.25.09 1.58.75 1.85.89.27.14.45.21.51.34.07.14.07.78-.18 1.47Z"/></svg></a>
-            <a href="#" aria-label="Facebook">f</a>
-            <a href="https://www.instagram.com/bloomwire._/" target="_blank" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
-            <a href="mailto:hello@bloomwire.in" aria-label="Email"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></a>
-          </div>
-        </div>
-        <div><h4>SHOP</h4><ul>
-          <li><a href="shop.html">Shop</a></li><li><a href="gift-sets.html">Gift Sets</a></li>
-          <li><a href="wholesale.html">Wholesale</a></li><li><a href="faq.html">FAQ</a></li>
-          <li><a href="gallery.html">Gallery</a></li><li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li><li><a href="#" onclick="event.preventDefault();showToast('Login coming soon!')">My Account</a></li>
-          <li><a href="track-order.html">Track Order</a></li>
-        </ul></div>
-        <div><h4>SUPPORT</h4><ul>
-          <li><a href="terms.html">Terms of Service</a></li><li><a href="terms.html">Privacy Policy</a></li>
-          <li><a href="terms.html">Refund &amp; Return Policy</a></li><li><a href="terms.html">Shipping Policy</a></li>
-          <li><a href="terms.html">Disclaimer</a></li><li><a href="terms.html">Grievance Redressal</a></li>
-        </ul></div>
-        <div class="footer-newsletter-col">
-          <h4>NEWSLETTER</h4>
-          <p>New collections, early access and ₹100 off your first order.</p>
-          <div class="footer-newsletter-input">
-            <input type="email" placeholder="Your email">
-            <button class="newsletter-send" aria-label="Subscribe"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
-          </div>
-        </div>
-      </div>
-      <div class="footer-reach">
-        <h4>REACH US · 24×7</h4>
-        <div class="footer-reach-items">
-          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg> <a href="mailto:hello@bloomwire.in">hello@bloomwire.in</a></span>
-          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px;"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Jaipur, Rajasthan, India</span>
-          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px;"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg> Always open, 24×7</span>
-        </div>
-      </div>
-      <div class="footer-trust-badges">
-        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px;"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Secure Checkout</span>
-        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px;"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M8 7h8M8 11h8M8 15h5"/></svg> GST Invoiced</span>
-        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px;"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Made in India</span>
-      </div>
-      <div class="footer-payments"><span>UPI</span><span>Visa</span><span>Mastercard</span><span>RuPay</span><span>COD</span></div>
-      <div class="footer-bottom">© 2026 BloomWire. All rights reserved. Made with love in Jaipur, India</div>
-    </div>
-  </footer>
-  <div class="overlay" id="overlay"></div>
-  <div class="cart-drawer" id="cart-drawer">
-    <div class="cart-drawer-header"><h3>Your Cart</h3><button class="cart-drawer-close">×</button></div>
-    <div class="cart-drawer-body"></div>
-    <div class="cart-drawer-footer"></div>
-  </div>
-  <a href="https://wa.me/916367532123" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12.01 2C6.49 2 2.02 6.47 2.02 11.99c0 1.76.46 3.48 1.34 4.99L2 22l5.13-1.34a9.96 9.96 0 0 0 4.87 1.27h.01c5.52 0 9.99-4.47 9.99-9.99 0-2.67-1.04-5.18-2.92-7.06A9.96 9.96 0 0 0 12.01 2Zm5.8 14.16c-.25.69-1.45 1.32-2 1.4-.51.08-1.16.11-1.87-.12-.43-.14-.99-.32-1.7-.63-2.98-1.29-4.93-4.29-5.08-4.49-.15-.2-1.22-1.62-1.22-3.09 0-1.47.77-2.19 1.05-2.49.27-.3.59-.37.79-.37l.57.01c.18 0 .43-.07.67.51.25.69.85 2.38.92 2.55.07.17.12.37.02.57-.09.2-.14.32-.27.49-.14.17-.29.38-.41.51-.14.14-.28.29-.12.57.16.27.72 1.19 1.54 1.92 1.06.94 1.95 1.23 2.22 1.37.27.14.43.12.59-.07.16-.2.67-.78.85-1.05.18-.27.36-.22.61-.13.25.09 1.58.75 1.85.89.27.14.45.21.51.34.07.14.07.78-.18 1.47Z"/></svg></a>
-  
-  <!-- Welcome Modal -->
-  <div class="welcome-modal-overlay" id="welcome-modal-overlay">
-    <div class="welcome-modal">
-      <button class="welcome-modal-close" onclick="closeWelcomeModal()">×</button>
-      <p class="welcome-eyebrow">WELCOME TO THE ATELIER</p>
-      <h2>Real Flowers Fade.<br>Memories Shouldn't.</h2>
-      <p>Here's 10% off your first everlasting bloom.</p>
-      <div class="welcome-coupon"><code>BLOOM10</code></div>
-      <button class="btn btn-cta" onclick="closeWelcomeModal()">Start Browsing</button>
-    </div>
-  </div>
+  <style>
+    /* ===== Creator Program Page — Premium Redesign ===== */
+    .creator-hero {
+      position: relative;
+      padding: 100px 0 80px;
+      background: linear-gradient(180deg, var(--cream) 0%, var(--paper) 100%);
+      overflow: hidden;
+    }
+    .creator-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(200,109,81,0.04) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .creator-hero-inner {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 40px;
+      text-align: center;
+    }
+    .creator-eyebrow {
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 16px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.7s cubic-bezier(0.4,0,0.2,1) 0.1s forwards;
+    }
+    .creator-hero h1 {
+      font-family: var(--font-heading);
+      font-size: 52px;
+      font-weight: 700;
+      color: var(--evergreen);
+      line-height: 1.15;
+      margin-bottom: 20px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.7s cubic-bezier(0.4,0,0.2,1) 0.25s forwards;
+    }
+    .creator-hero h1 .italic {
+      font-style: italic;
+      color: var(--terracotta);
+    }
+    .creator-hero-subtitle {
+      font-size: 17px;
+      color: hsl(var(--muted-foreground));
+      line-height: 1.7;
+      max-width: 560px;
+      margin: 0 auto;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.7s cubic-bezier(0.4,0,0.2,1) 0.4s forwards;
+    }
 
-  <script src="js/products.js?v=3"></script>
-  <script src="js/cart.js?v=3"></script>
-  <script src="js/main.js?v=3"></script>
-<button class="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">↑</button>
+    /* ===== Benefits Section ===== */
+    .creator-benefits-section {
+      padding: 80px 0 100px;
+      background: var(--paper);
+    }
+    .creator-benefits-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 40px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px;
+    }
+    .creator-benefit-card {
+      background: #FFFEFC;
+      border-radius: 20px;
+      border: 1px solid rgba(200,125,96,0.06);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+      padding: 40px 28px;
+      min-height: 280px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.35s cubic-bezier(0.4,0,0.2,1), box-shadow 0.35s cubic-bezier(0.4,0,0.2,1);
+    }
+    .creator-benefit-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--terracotta), var(--sage));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+    }
+    .creator-benefit-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.07);
+    }
+    .creator-benefit-card:hover::before {
+      transform: scaleX(1);
+    }
+    .creator-benefit-icon-wrap {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: rgba(200,125,96,0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1), background 0.3s ease;
+    }
+    .creator-benefit-card:hover .creator-benefit-icon-wrap {
+      transform: scale(1.12) rotate(-5deg);
+      background: rgba(200,125,96,0.1);
+    }
+    .creator-benefit-icon-wrap svg {
+      color: var(--terracotta);
+    }
+    .creator-benefit-card h4 {
+      font-family: var(--font-heading);
+      font-size: 19px;
+      font-weight: 600;
+      color: #2D2926;
+      margin-bottom: 10px;
+    }
+    .creator-benefit-card p {
+      font-size: 15px;
+      color: hsl(var(--muted-foreground));
+      line-height: 1.6;
+    }
+
+    /* ===== Application Form Section ===== */
+    .creator-apply-section {
+      padding: 100px 0;
+      background: linear-gradient(180deg, var(--paper) 0%, var(--cream) 100%);
+    }
+    .creator-form-wrap {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+    .creator-form-card {
+      background: #FFFFFF;
+      border-radius: 24px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+      padding: 48px 40px;
+    }
+    .creator-form-eyebrow {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    .creator-form-heading {
+      font-family: var(--font-heading);
+      font-size: 28px;
+      font-weight: 700;
+      color: #2D2926;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    .creator-form-subtitle {
+      font-size: 15px;
+      color: hsl(var(--muted-foreground));
+      text-align: center;
+      margin-bottom: 36px;
+      line-height: 1.6;
+    }
+    .creator-form .form-group {
+      margin-bottom: 20px;
+    }
+    .creator-form .form-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #2D2926;
+      letter-spacing: 0.3px;
+    }
+    .creator-form .form-group input,
+    .creator-form .form-group textarea {
+      width: 100%;
+      padding: 16px 20px;
+      border: 1.5px solid #E8E0D8;
+      border-radius: 12px;
+      font-size: 15px;
+      font-family: var(--font-body);
+      background: #fffdfb;
+      color: #2D2926;
+      transition: border-color 0.3s cubic-bezier(0.4,0,0.2,1), box-shadow 0.3s cubic-bezier(0.4,0,0.2,1);
+    }
+    .creator-form .form-group input::placeholder,
+    .creator-form .form-group textarea::placeholder {
+      color: hsl(0 0% 75%);
+    }
+    .creator-form .form-group input:focus,
+    .creator-form .form-group textarea:focus {
+      outline: none;
+      border-color: #C87D60;
+      box-shadow: 0 0 0 3px rgba(200,125,96,0.1);
+    }
+    .creator-form .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .creator-form .btn-cta {
+      width: 100%;
+      padding: 16px 40px;
+      border-radius: 50px;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      background: linear-gradient(135deg, #d97757, #c86d51);
+      color: #fff;
+      box-shadow: 0 4px 15px rgba(200,125,96,0.25);
+      transition: transform 0.35s cubic-bezier(0.4,0,0.2,1), box-shadow 0.35s cubic-bezier(0.4,0,0.2,1);
+      border: none;
+      cursor: pointer;
+    }
+    .creator-form .btn-cta:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(200,109,81,0.35);
+    }
+    .creator-form .btn-cta:active {
+      transform: translateY(-1px) scale(0.98);
+    }
+
+    /* ===== Scroll Reveal Stagger ===== */
+    .reveal-stagger-1 { transition-delay: 0s; }
+    .reveal-stagger-2 { transition-delay: 0.1s; }
+    .reveal-stagger-3 { transition-delay: 0.2s; }
+    .reveal-stagger-4 { transition-delay: 0.3s; }
+
+    /* ===== Mobile ===== */
+    @media (max-width: 900px) {
+      .creator-benefits-grid { grid-template-columns: repeat(2, 1fr); }
+      .creator-hero h1 { font-size: 38px; }
+      .creator-hero, .creator-apply-section { padding: 60px 0; }
+      .creator-benefits-section { padding: 40px 0 60px; }
+    }
+    @media (max-width: 600px) {
+      .creator-benefits-grid { grid-template-columns: 1fr; }
+      .creator-form .form-row { grid-template-columns: 1fr; }
+      .creator-form-card { padding: 36px 24px; }
+      .creator-hero h1 { font-size: 32px; }
+      .creator-hero-subtitle { font-size: 15px; }
+      .creator-benefits-grid { padding: 0 20px; gap: 20px; }
+      .creator-form-wrap { padding: 0 20px; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+<div class="announcement">FREE SHIPPING ON ORDERS ABOVE ₹499 · HANDCRAFTED IN JAIPUR</div>
+<header class="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">BloomWire</a>
+    <nav class="nav-links">
+      <div class="nav-dropdown"><a href="shop.html">Shop ▾</a><div class="dropdown-menu"><a href="shop.html?category=single_flower">Single Flowers</a><a href="shop.html?category=bouquet">Bouquets</a><a href="shop.html?category=pots">Pots</a><a href="shop.html?category=keychains">Keychains</a></div></div>
+      <a href="gift-sets.html">Gift Sets</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="rewards.html">Rewards</a>
+      <a href="creator-program.html" class="active">Creator Program</a>
+    </nav>
+    <div class="nav-icons">
+      <a href="shop.html" title="Search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></a>
+      <a href="rewards.html" title="Petals"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2c-2 2-2 4 0 6 2-2 2-4 0-6zM12 22c-2-2-2-4 0-6 2 2 2 4 0 6zM2 12c2-2 4-2 6 0-2 2-4 2-6 0zM22 12c-2-2-4-2-6 0 2 2 4 2 6 0zM5 5c-1 2 0 4 2 4 1-2 0-4-2-4zM19 19c-1-2 0-4 2-4 1 2 0 4-2 4zM19 5c1 2 0 4-2 4-1-2 0-4 2-4zM5 19c1-2 0-4-2-4-1 2 0 4 2 4z"/></svg></a>
+      <a href="wishlist.html" title="Wishlist"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg> <span class="wishlist-count" style="display:none;">0</span></a>
+      <a href="cart.html" title="Cart" data-open-cart><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg> <span class="cart-count" style="display:none;">0</span></a>
+      <a href="#" title="Account" onclick="event.preventDefault();showToast('Login coming soon!')"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 0 0-16 0"/></svg></a>
+      <button class="hamburger" aria-label="Toggle navigation"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="creator-hero">
+  <div class="creator-hero-inner">
+    <p class="creator-eyebrow">BloomWire Creators</p>
+    <h1>Join the <span class="italic">Creator Family</span></h1>
+    <p class="creator-hero-subtitle">For stylists, content creators and gift enthusiasts who love everlasting blooms. Get free flowers, earn on every referral and be featured across our channels.</p>
+  </div>
+</section>
+
+<!-- ===== BENEFITS ===== -->
+<section class="creator-benefits-section">
+  <div class="creator-benefits-grid">
+    <div class="creator-benefit-card reveal reveal-stagger-1">
+      <div class="creator-benefit-icon-wrap">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2c-2 2-2 4 0 6 2-2 2-4 0-6zM12 22c-2-2-2-4 0-6 2 2 2 4 0 6zM2 12c2-2 4-2 6 0-2 2-4 2-6 0zM22 12c-2-2-4-2-6 0 2 2 4 2 6 0zM5 5c-1 2 0 4 2 4 1-2 0-4-2-4zM19 19c-1-2 0-4 2-4 1 2 0 4-2 4zM19 5c1 2 0 4-2 4-1-2 0-4 2-4zM5 19c1-2 0-4-2-4-1 2 0 4 2 4z"/></svg>
+      </div>
+      <h4>Free Monthly Bloom</h4>
+      <p>A new piece to style and share each month.</p>
+    </div>
+    <div class="creator-benefit-card reveal reveal-stagger-2">
+      <div class="creator-benefit-icon-wrap">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 6v12M9 9.5c0-1.38 1.34-2 3-2s3 .62 3 2-1.34 2-3 2-3 .62-3 2 1.34 2 3 2 3-.62 3-2"/></svg>
+      </div>
+      <h4>10% Creator Commission</h4>
+      <p>Earn on every order via your unique code.</p>
+    </div>
+    <div class="creator-benefit-card reveal reveal-stagger-3">
+      <div class="creator-benefit-icon-wrap">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8Z"/></svg>
+      </div>
+      <h4>Early Access</h4>
+      <p>Shop new collections before they go live.</p>
+    </div>
+    <div class="creator-benefit-card reveal reveal-stagger-4">
+      <div class="creator-benefit-icon-wrap">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M5.6 18.4l2.8-2.8M15.6 8.4l2.8-2.8"/></svg>
+      </div>
+      <h4>Get Featured</h4>
+      <p>Your content highlighted across our channels.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== APPLICATION FORM ===== -->
+<section class="creator-apply-section">
+  <div class="creator-form-wrap reveal">
+    <div class="creator-form-card">
+      <p class="creator-form-eyebrow">Application</p>
+      <h2 class="creator-form-heading">Apply to Join the Creator Family</h2>
+      <p class="creator-form-subtitle">Tell us about yourself and why you'd love to create with BloomWire. We review every application personally.</p>
+      <form class="creator-form" onsubmit="event.preventDefault();showToast('Application submitted! We will review and get back to you within 5 days');this.reset();">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Name *</label>
+            <input type="text" required placeholder="Your name">
+          </div>
+          <div class="form-group">
+            <label>Instagram *</label>
+            <input type="text" required placeholder="@yourhandle">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Email *</label>
+            <input type="email" required placeholder="you@example.com">
+          </div>
+          <div class="form-group">
+            <label>Followers</label>
+            <input type="text" placeholder="e.g. 5K, 10K">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Why do you love BloomWire?</label>
+          <textarea rows="4" placeholder="Tell us why you'd be a great creator..."></textarea>
+        </div>
+        <button type="submit" class="btn-cta">Apply to Join</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>BloomWire</h3>
+        <p>Handcrafted pipe cleaner flowers made with love in Jaipur, Rajasthan, India.</p>
+        <div class="footer-social">
+          <a href="https://wa.me/916367532123" target="_blank" aria-label="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.01 2C6.49 2 2.02 6.47 2.02 11.99c0 1.76.46 3.48 1.34 4.99L2 22l5.13-1.34a9.96 9.96 0 0 0 4.87 1.27h.01c5.52 0 9.99-4.47 9.99-9.99 0-2.67-1.04-5.18-2.92-7.06A9.96 9.96 0 0 0 12.01 2Zm5.8 14.16c-.25.69-1.45 1.32-2 1.4-.51.08-1.16.11-1.87-.12-.43-.14-.99-.32-1.7-.63-2.98-1.29-4.93-4.29-5.08-4.49-.15-.2-1.22-1.62-1.22-3.09 0-1.47.77-2.19 1.05-2.49.27-.3.59-.37.79-.37l.57.01c.18 0 .43-.07.67.51.25.69.85 2.38.92 2.55.07.17.12.37.02.57-.09.2-.14.32-.27.49-.14.17-.29.38-.41.51-.14.14-.28.29-.12.57.16.27.72 1.19 1.54 1.92 1.06.94 1.95 1.23 2.22 1.37.27.14.43.12.59-.07.16-.2.67-.78.85-1.05.18-.27.36-.22.61-.13.25.09 1.58.75 1.85.89.27.14.45.21.51.34.07.14.07.78-.18 1.47Z"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-1.66 0-3 1.34-3 3v2H8v3h3v6h3v-6h2.5l.5-3H14V9z"/></svg></a>
+          <a href="https://www.instagram.com/bloomwire._/" target="_blank" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="mailto:hello@bloomwire.in" aria-label="Email"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></a>
+        </div>
+      </div>
+      <div><h4>SHOP</h4><ul>
+        <li><a href="shop.html">Shop</a></li><li><a href="gift-sets.html">Gift Sets</a></li>
+        <li><a href="wholesale.html">Wholesale</a></li><li><a href="faq.html">FAQ</a></li>
+        <li><a href="gallery.html">Gallery</a></li><li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li><li><a href="#" onclick="event.preventDefault();showToast('Login coming soon!')">My Account</a></li>
+        <li><a href="track-order.html">Track Order</a></li>
+      </ul></div>
+      <div><h4>SUPPORT</h4><ul>
+        <li><a href="terms.html">Terms of Service</a></li><li><a href="terms.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Refund &amp; Return Policy</a></li><li><a href="terms.html">Shipping Policy</a></li>
+        <li><a href="terms.html">Disclaimer</a></li><li><a href="terms.html">Grievance Redressal</a></li>
+      </ul></div>
+      <div class="footer-newsletter-col">
+        <h4>NEWSLETTER</h4>
+        <p>New collections, early access and ₹100 off your first order.</p>
+        <div class="footer-newsletter-input">
+          <input type="email" placeholder="Your email">
+          <button class="newsletter-send" aria-label="Subscribe"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-reach">
+      <h4>REACH US · 24×7</h4>
+      <div class="footer-reach-items">
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:4px;"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg> <a href="mailto:hello@bloomwire.in">hello@bloomwire.in</a></span>
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:4px;"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Jaipur, Rajasthan, India</span>
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:4px;"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg> Always open, 24×7</span>
+      </div>
+    </div>
+    <div class="footer-trust-badges">
+      <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:4px;"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Secure Checkout</span>
+      <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:4px;"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M8 7h8M8 11h8M8 15h5"/></svg> GST Invoiced</span>
+      <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:4px;"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Made in India</span>
+    </div>
+    <div class="footer-payments"><span>UPI</span><span>Visa</span><span>Mastercard</span><span>RuPay</span><span>COD</span></div>
+    <div class="footer-bottom">© 2026 BloomWire. All rights reserved. Made with love in Jaipur, India.</div>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+<div class="cart-drawer" id="cart-drawer">
+  <div class="cart-drawer-header"><h3>Your Cart</h3><button class="cart-drawer-close">&times;</button></div>
+  <div class="cart-drawer-body"></div>
+  <div class="cart-drawer-footer"></div>
+</div>
+<a href="https://wa.me/916367532123" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M12.01 2C6.49 2 2.02 6.47 2.02 11.99c0 1.76.46 3.48 1.34 4.99L2 22l5.13-1.34a9.96 9.96 0 0 0 4.87 1.27h.01c5.52 0 9.99-4.47 9.99-9.99 0-2.67-1.04-5.18-2.92-7.06A9.96 9.96 0 0 0 12.01 2Zm5.8 14.16c-.25.69-1.45 1.32-2 1.4-.51.08-1.16.11-1.87-.12-.43-.14-.99-.32-1.7-.63-2.98-1.29-4.93-4.29-5.08-4.49-.15-.2-1.22-1.62-1.22-3.09 0-1.47.77-2.19 1.05-2.49.27-.3.59-.37.79-.37l.57.01c.18 0 .43-.07.67.51.25.69.85 2.38.92 2.55.07.17.12.37.02.57-.09.2-.14.32-.27.49-.14.17-.29.38-.41.51-.14.14-.28.29-.12.57.16.27.72 1.19 1.54 1.92 1.06.94 1.95 1.23 2.22 1.37.27.14.43.12.59-.07.16-.2.67-.78.85-1.05.18-.27.36-.22.61-.13.25.09 1.58.75 1.85.89.27.14.45.21.51.34.07.14.07.78-.18 1.47Z"/></svg>
+</a>
+
+<!-- Welcome Modal -->
+<div class="welcome-modal-overlay" id="welcome-modal-overlay">
+  <div class="welcome-modal">
+    <button class="welcome-modal-close" onclick="closeWelcomeModal()">&times;</button>
+    <p class="welcome-eyebrow">WELCOME TO THE ATELIER</p>
+    <h2>Real Flowers Fade.<br>Memories Shouldn't.</h2>
+    <p>Here's 10% off your first everlasting bloom.</p>
+    <div class="welcome-coupon"><code>BLOOM10</code></div>
+    <button class="btn btn-cta" onclick="closeWelcomeModal()">Start Browsing</button>
+  </div>
+</div>
+
+<script src="js/products.js?v=3"></script>
+<script src="js/cart.js?v=3"></script>
+<script src="js/main.js?v=3"></script>
+<button class="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
 <script>
 window.addEventListener('scroll',function(){var btn=document.querySelector('.scroll-top');if(btn){if(window.scrollY>400){btn.classList.add('visible')}else{btn.classList.remove('visible')}}});
+// Scroll reveal for creator page
+var reveals=document.querySelectorAll('.reveal');
+var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},{threshold:0.1});
+reveals.forEach(function(el){io.observe(el)});
 </script>
 </body>
 </html>
