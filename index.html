@@ -10,6 +10,171 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..800;1,400..800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Hero Entrance Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInScale {
+      from {
+        opacity: 0;
+        transform: scale(1.05);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .hero-badge {
+      animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.1s both;
+    }
+    .hero h1 {
+      animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.25s both;
+    }
+    .hero-subtitle {
+      animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.4s both;
+    }
+    .hero-body {
+      animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.55s both;
+    }
+    .hero-buttons {
+      animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.7s both;
+    }
+
+    .hero-img-wrapper {
+      animation: fadeInScale 1.2s ease-out 0.3s both;
+    }
+
+    /* Scroll Reveal Animations */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+      will-change: opacity, transform;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-stagger-1 { transition-delay: 0s; }
+    .reveal-stagger-2 { transition-delay: 0.1s; }
+    .reveal-stagger-3 { transition-delay: 0.2s; }
+    .reveal-stagger-4 { transition-delay: 0.3s; }
+
+    /* Occasion Card Top Accent Bar */
+    .occasion-card {
+      position: relative;
+      overflow: hidden;
+    }
+    .occasion-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--terracotta, #c86d51), var(--sage, #8a9b6e));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .occasion-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    /* Stats Bar Hover Scale */
+    .stat-value {
+      display: inline-block;
+      transition: transform 0.4s var(--ease-bounce, cubic-bezier(0.34, 1.56, 0.64, 1));
+    }
+    .stat-item:hover .stat-value,
+    .stat-value:hover {
+      transform: scale(1.1);
+    }
+
+    /* Trust Badges Hover Lift */
+    .trust-badge-item {
+      transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .trust-badge-item:hover {
+      transform: translateY(-4px);
+    }
+
+    /* Review Card Bottom Accent Bar */
+    .review-card {
+      position: relative;
+      overflow: hidden;
+    }
+    .review-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--terracotta, #c86d51), var(--sage, #8a9b6e));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .review-card:hover::after {
+      transform: scaleX(1);
+    }
+
+    /* Value Prop Card Icon Circles */
+    .value-prop .icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: rgba(200, 125, 96, 0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 14px;
+      transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .value-prop:hover .icon {
+      transform: scale(1.12) rotate(-5deg);
+    }
+
+    /* Footer Warm Dark Background */
+    footer.footer {
+      background: #1F1B18 !important;
+    }
+
+    /* Mobile Animation Adjustments */
+    @media (max-width: 768px) {
+      .hero-badge,
+      .hero h1,
+      .hero-subtitle,
+      .hero-body,
+      .hero-buttons {
+        animation-delay: 0.1s !important;
+      }
+      .hero-img-wrapper {
+        animation-delay: 0.1s !important;
+      }
+      .reveal {
+        transform: translateY(20px);
+      }
+      .reveal-stagger-1,
+      .reveal-stagger-2,
+      .reveal-stagger-3,
+      .reveal-stagger-4 {
+        transition-delay: 0.05s !important;
+      }
+    }
+  </style>
 </head>
 <body>
 <div class="announcement">FREE SHIPPING ON ORDERS ABOVE ₹499 · HANDCRAFTED IN JAIPUR</div>
@@ -53,19 +218,19 @@
 
   <section class="trust-badges-bar">
     <div class="trust-badges-container">
-      <div class="trust-badge-item"><span class="badge-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;"><path d="M18 11V6a2 2 0 0 0-4 0v5M14 10V4a2 2 0 0 0-4 0v8c0 4 3 8 8 8s8-4 8-8v-4a2 2 0 0 0-4 0v1"/></svg></span> 100% Handmade</div>
-      <div class="trust-badge-item"><span class="badge-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2c-2 2-2 4 0 6 2-2 2-4 0-6zM12 22c-2-2-2-4 0-6 2 2 2 4 0 6zM2 12c2-2 4-2 6 0-2 2-4 2-6 0zM22 12c-2-2-4-2-6 0 2 2 4 2 6 0zM5 5c-1 2 0 4 2 4 1-2 0-4-2-4zM19 19c-1-2 0-4 2-4 1 2 0 4-2 4zM19 5c1 2 0 4-2 4-1-2 0-4 2-4zM5 19c1-2 0-4-2-4-1 2 0 4 2 4z"/></svg></span> Lasts Forever</div>
-      <div class="trust-badge-item"><span class="badge-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;"><path d="M14 18V6a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h1"/><path d="M14 9h4l3 3v5a1 1 0 0 1-1 1h-1"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></span> Free Shipping ₹499+</div>
-      <div class="trust-badge-item"><span class="badge-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M5 12v9h14v-9M12 8S10 2 7 4s5 4 5 4ZM12 8s2-6 5-4-5 4-5 4Z"/></svg></span> Gift-Ready</div>
+      <div class="trust-badge-item reveal reveal-stagger-1"><span class="badge-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;"><path d="M18 11V6a2 2 0 0 0-4 0v5M14 10V4a2 2 0 0 0-4 0v8c0 4 3 8 8 8s8-4 8-8v-4a2 2 0 0 0-4 0v1"/></svg></span> 100% Handmade</div>
+      <div class="trust-badge-item reveal reveal-stagger-2"><span class="badge-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2c-2 2-2 4 0 6 2-2 2-4 0-6zM12 22c-2-2-2-4 0-6 2 2 2 4 0 6zM2 12c2-2 4-2 6 0-2 2-4 2-6 0zM22 12c-2-2-4-2-6 0 2 2 4 2 6 0zM5 5c-1 2 0 4 2 4 1-2 0-4-2-4zM19 19c-1-2 0-4 2-4 1 2 0 4-2 4zM19 5c1 2 0 4-2 4-1-2 0-4 2-4zM5 19c1-2 0-4-2-4-1 2 0 4 2 4z"/></svg></span> Lasts Forever</div>
+      <div class="trust-badge-item reveal reveal-stagger-3"><span class="badge-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;"><path d="M14 18V6a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h1"/><path d="M14 9h4l3 3v5a1 1 0 0 1-1 1h-1"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></span> Free Shipping ₹499+</div>
+      <div class="trust-badge-item reveal reveal-stagger-4"><span class="badge-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M5 12v9h14v-9M12 8S10 2 7 4s5 4 5 4ZM12 8s2-6 5-4-5 4-5 4Z"/></svg></span> Gift-Ready</div>
     </div>
   </section>
 
   <section class="stats-bar">
     <div class="stats-bar-inner">
-      <div class="stat-item"><div class="stat-value">100%</div><div class="stat-label">HAND-WOVEN VELVET</div></div>
-      <div class="stat-item"><div class="stat-value">Zero</div><div class="stat-label">WILTING · ZERO WATER</div></div>
-      <div class="stat-item"><div class="stat-value">5.0</div><div class="stat-label">AVERAGE RATING</div></div>
-      <div class="stat-item"><div class="stat-value">∞</div><div class="stat-label">POSEABLE WIRE STEMS</div></div>
+      <div class="stat-item reveal reveal-stagger-1"><div class="stat-value">100%</div><div class="stat-label">HAND-WOVEN VELVET</div></div>
+      <div class="stat-item reveal reveal-stagger-2"><div class="stat-value">Zero</div><div class="stat-label">WILTING · ZERO WATER</div></div>
+      <div class="stat-item reveal reveal-stagger-3"><div class="stat-value">5.0</div><div class="stat-label">AVERAGE RATING</div></div>
+      <div class="stat-item reveal reveal-stagger-4"><div class="stat-value">∞</div><div class="stat-label">POSEABLE WIRE STEMS</div></div>
     </div>
   </section>
 
@@ -75,12 +240,12 @@
       <h2 class="section-heading">Find the Perfect Bloom for Every Moment</h2>
       <p class="section-subtitle">Whether it's a birthday, an anniversary, or just because — there's a bloom for every feeling.</p>
       <div class="occasion-grid">
-        <a href="shop.html" class="occasion-card"><div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></div><h4>Anniversary</h4><p>Love that never fades</p></a>
-        <a href="shop.html" class="occasion-card"><div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-8a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v8"/><path d="M4 16h16"/><path d="M12 11V7"/><path d="M12 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></svg></div><h4>Birthday</h4><p>Make their day unforgettable</p></a>
-        <a href="shop.html" class="occasion-card"><div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M5.6 18.4l2.8-2.8M15.6 8.4l2.8-2.8"/></svg></div><h4>Festive</h4><p>Celebrate with colour</p></a>
-        <a href="shop.html" class="occasion-card"><div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2c-2 2-2 4 0 6 2-2 2-4 0-6zM12 22c-2-2-2-4 0-6 2 2 2 4 0 6zM2 12c2-2 4-2 6 0-2 2-4 2-6 0zM22 12c-2-2-4-2-6 0 2 2 4 2 6 0zM5 5c-1 2 0 4 2 4 1-2 0-4-2-4zM19 19c-1-2 0-4 2-4 1 2 0 4-2 4zM19 5c1 2 0 4-2 4-1-2 0-4 2-4zM5 19c1-2 0-4-2-4-1 2 0 4 2 4z"/></svg></div><h4>Thank You</h4><p>Gratitude that lasts</p></a>
-        <a href="shop.html" class="occasion-card"><div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><h4>Housewarming</h4><p>Blooms for a new beginning</p></a>
-        <a href="shop.html" class="occasion-card"><div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></div><h4>Just Because</h4><p>No reason needed</p></a>
+        <a href="shop.html" class="occasion-card reveal reveal-stagger-1"><div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></div><h4>Anniversary</h4><p>Love that never fades</p></a>
+        <a href="shop.html" class="occasion-card reveal reveal-stagger-2"><div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-8a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v8"/><path d="M4 16h16"/><path d="M12 11V7"/><path d="M12 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></svg></div><h4>Birthday</h4><p>Make their day unforgettable</p></a>
+        <a href="shop.html" class="occasion-card reveal reveal-stagger-3"><div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M5.6 18.4l2.8-2.8M15.6 8.4l2.8-2.8"/></svg></div><h4>Festive</h4><p>Celebrate with colour</p></a>
+        <a href="shop.html" class="occasion-card reveal reveal-stagger-4"><div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2c-2 2-2 4 0 6 2-2 2-4 0-6zM12 22c-2-2-2-4 0-6 2 2 2 4 0 6zM2 12c2-2 4-2 6 0-2 2-4 2-6 0zM22 12c-2-2-4-2-6 0 2 2 4 2 6 0zM5 5c-1 2 0 4 2 4 1-2 0-4-2-4zM19 19c-1-2 0-4 2-4 1 2 0 4-2 4zM19 5c1 2 0 4-2 4-1-2 0-4 2-4zM5 19c1-2 0-4-2-4-1 2 0 4 2 4z"/></svg></div><h4>Thank You</h4><p>Gratitude that lasts</p></a>
+        <a href="shop.html" class="occasion-card reveal reveal-stagger-1"><div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><h4>Housewarming</h4><p>Blooms for a new beginning</p></a>
+        <a href="shop.html" class="occasion-card reveal reveal-stagger-2"><div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></div><h4>Just Because</h4><p>No reason needed</p></a>
       </div>
     </div>
   </section>
@@ -100,15 +265,15 @@
       <h2 class="section-heading">Loved by our customers</h2>
       <p class="section-subtitle">Real blooms in real homes — here's what our customers say.</p>
       <div class="reviews-grid">
-        <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"Got the Red Rose Stem for our anniversary — it's been 6 months and it looks exactly like day one. My wife absolutely loves it!"</p><div class="review-author"><strong>— Arjun</strong> <span>Mumbai</span></div></div>
-        <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"The Sunflower Bouquet Pot brightens my desk every day. No watering, no maintenance, just beauty."</p><div class="review-author"><strong>— Priya</strong> <span>Bangalore</span></div></div>
-        <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"Gifted the Birthday Bloom Box to my sister. She couldn't believe they weren't real flowers!"</p><div class="review-author"><strong>— Sneha</strong> <span>Pune</span></div></div>
-        <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"Marigold Keychain on my bag always gets compliments. Best ₹199 I've spent!"</p><div class="review-author"><strong>— Aakash</strong> <span>Kolkata</span></div></div>
+        <div class="review-card reveal reveal-stagger-1"><div class="review-stars">★★★★★</div><p class="review-text">"Got the Red Rose Stem for our anniversary — it's been 6 months and it looks exactly like day one. My wife absolutely loves it!"</p><div class="review-author"><strong>— Arjun</strong> <span>Mumbai</span></div></div>
+        <div class="review-card reveal reveal-stagger-2"><div class="review-stars">★★★★★</div><p class="review-text">"The Sunflower Bouquet Pot brightens my desk every day. No watering, no maintenance, just beauty."</p><div class="review-author"><strong>— Priya</strong> <span>Bangalore</span></div></div>
+        <div class="review-card reveal reveal-stagger-3"><div class="review-stars">★★★★★</div><p class="review-text">"Gifted the Birthday Bloom Box to my sister. She couldn't believe they weren't real flowers!"</p><div class="review-author"><strong>— Sneha</strong> <span>Pune</span></div></div>
+        <div class="review-card reveal reveal-stagger-4"><div class="review-stars">★★★★★</div><p class="review-text">"Marigold Keychain on my bag always gets compliments. Best ₹199 I've spent!"</p><div class="review-author"><strong>— Aakash</strong> <span>Kolkata</span></div></div>
       </div>
     </div>
   </section>
 
-  <section class="section" style="background:var(--rose-mist);text-align:center;">
+  <section class="section reveal" style="background:var(--rose-mist);text-align:center;">
     <div class="container">
       <p class="section-title">INSTAGRAM</p>
       <h2 class="section-heading">From Our Garden <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-left:4px;"><circle cx="12" cy="12" r="3"/><path d="M12 2c-2 2-2 4 0 6 2-2 2-4 0-6zM12 22c-2-2-2-4 0-6 2 2 2 4 0 6zM2 12c2-2 4-2 6 0-2 2-4 2-6 0zM22 12c-2-2-4-2-6 0 2 2 4 2 6 0zM5 5c-1 2 0 4 2 4 1-2 0-4-2-4zM19 19c-1-2 0-4 2-4 1 2 0 4-2 4zM19 5c1 2 0 4-2 4-1-2 0-4 2-4zM5 19c1-2 0-4-2-4-1 2 0 4 2 4z"/></svg></h2>
@@ -122,10 +287,10 @@
       <p class="section-title" style="color:var(--terracotta);">WHY BLOOMWIRE</p>
       <h2 class="section-heading" style="color:white;">Real flowers fade. Memories shouldn't.</h2>
       <div class="value-props">
-        <div class="value-prop" style="color:rgba(255,255,255,.7);"><div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2c-2 2-2 4 0 6 2-2 2-4 0-6zM12 22c-2-2-2-4 0-6 2 2 2 4 0 6zM2 12c2-2 4-2 6 0-2 2-4 2-6 0zM22 12c-2-2-4-2-6 0 2 2 4 2 6 0zM5 5c-1 2 0 4 2 4 1-2 0-4-2-4zM19 19c-1-2 0-4 2-4 1 2 0 4-2 4zM19 5c1 2 0 4-2 4-1-2 0-4 2-4zM5 19c1-2 0-4-2-4-1 2 0 4 2 4z"/></svg></div><h4 style="color:white;">Never fades</h4><p>No water, no wilting. Your bloom looks the same in year five as on day one.</p></div>
-        <div class="value-prop" style="color:rgba(255,255,255,.7);"><div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-4 0v5M14 10V4a2 2 0 0 0-4 0v6M10 10V6a2 2 0 0 0-4 0v8c0 4 3 8 8 8s8-4 8-8v-4a2 2 0 0 0-4 0v1"/></svg></div><h4 style="color:white;">Truly handmade</h4><p>Woven petal by petal by artisans in Jaipur — no two blooms are identical.</p></div>
-        <div class="value-prop" style="color:rgba(255,255,255,.7);"><div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 4 13c0-5 4-9 11-9 0 7-4 11-9 11M4 13c4 0 7-3 7-7"/></svg></div><h4 style="color:white;">Poseable by design</h4><p>Flexible wire stems bend, curl and stand exactly how you arrange them.</p></div>
-        <div class="value-prop" style="color:rgba(255,255,255,.7);"><div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M5 12v9h14v-9M12 8S10 2 7 4s5 4 5 4ZM12 8s2-6 5-4-5 4-5 4Z"/></svg></div><h4 style="color:white;">Gift-ready</h4><p>Tissue-wrapped, note-card ready, and safe for allergy-prone homes.</p></div>
+        <div class="value-prop reveal reveal-stagger-1" style="color:rgba(255,255,255,.7);"><div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2c-2 2-2 4 0 6 2-2 2-4 0-6zM12 22c-2-2-2-4 0-6 2 2 2 4 0 6zM2 12c2-2 4-2 6 0-2 2-4 2-6 0zM22 12c-2-2-4-2-6 0 2 2 4 2 6 0zM5 5c-1 2 0 4 2 4 1-2 0-4-2-4zM19 19c-1-2 0-4 2-4 1 2 0 4-2 4zM19 5c1 2 0 4-2 4-1-2 0-4 2-4zM5 19c1-2 0-4-2-4-1 2 0 4 2 4z"/></svg></div><h4 style="color:white;">Never fades</h4><p>No water, no wilting. Your bloom looks the same in year five as on day one.</p></div>
+        <div class="value-prop reveal reveal-stagger-2" style="color:rgba(255,255,255,.7);"><div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-4 0v5M14 10V4a2 2 0 0 0-4 0v6M10 10V6a2 2 0 0 0-4 0v8c0 4 3 8 8 8s8-4 8-8v-4a2 2 0 0 0-4 0v1"/></svg></div><h4 style="color:white;">Truly handmade</h4><p>Woven petal by petal by artisans in Jaipur — no two blooms are identical.</p></div>
+        <div class="value-prop reveal reveal-stagger-3" style="color:rgba(255,255,255,.7);"><div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 4 13c0-5 4-9 11-9 0 7-4 11-9 11M4 13c4 0 7-3 7-7"/></svg></div><h4 style="color:white;">Poseable by design</h4><p>Flexible wire stems bend, curl and stand exactly how you arrange them.</p></div>
+        <div class="value-prop reveal reveal-stagger-4" style="color:rgba(255,255,255,.7);"><div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M5 12v9h14v-9M12 8S10 2 7 4s5 4 5 4ZM12 8s2-6 5-4-5 4-5 4Z"/></svg></div><h4 style="color:white;">Gift-ready</h4><p>Tissue-wrapped, note-card ready, and safe for allergy-prone homes.</p></div>
       </div>
     </div>
   </section>
@@ -175,10 +340,10 @@
       <h2 class="section-heading">Shop by Occasion</h2>
       <p class="section-subtitle">Jump straight to a handpicked collection for the moment that matters.</p>
       <div class="occasion-grid" style="max-width:800px;margin:0 auto;">
-        <a href="shop.html" class="occasion-card"><h4 style="margin:0;">Birthday</h4><p>Shop the collection</p></a>
-        <a href="shop.html" class="occasion-card"><h4 style="margin:0;">Anniversary</h4><p>Shop the collection</p></a>
-        <a href="shop.html" class="occasion-card"><h4 style="margin:0;">Thank You</h4><p>Shop the collection</p></a>
-        <a href="shop.html" class="occasion-card"><h4 style="margin:0;">Just Because</h4><p>Shop the collection</p></a>
+        <a href="shop.html" class="occasion-card reveal reveal-stagger-3"><h4 style="margin:0;">Birthday</h4><p>Shop the collection</p></a>
+        <a href="shop.html" class="occasion-card reveal reveal-stagger-4"><h4 style="margin:0;">Anniversary</h4><p>Shop the collection</p></a>
+        <a href="shop.html" class="occasion-card reveal reveal-stagger-1"><h4 style="margin:0;">Thank You</h4><p>Shop the collection</p></a>
+        <a href="shop.html" class="occasion-card reveal reveal-stagger-2"><h4 style="margin:0;">Just Because</h4><p>Shop the collection</p></a>
       </div>
     </div>
   </section>
@@ -207,9 +372,9 @@
       <h2 class="section-heading">Tag Us, Get Rewarded <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-left:4px;"><circle cx="12" cy="12" r="3"/><path d="M12 2c-2 2-2 4 0 6 2-2 2-4 0-6zM12 22c-2-2-2-4 0-6 2 2 2 4 0 6zM2 12c2-2 4-2 6 0-2 2-4 2-6 0zM22 12c-2-2-4-2-6 0 2 2 4 2 6 0zM5 5c-1 2 0 4 2 4 1-2 0-4-2-4zM19 19c-1-2 0-4 2-4 1 2 0 4-2 4zM19 5c1 2 0 4-2 4-1-2 0-4 2-4zM5 19c1-2 0-4-2-4-1 2 0 4 2 4z"/></svg></h2>
       <p class="section-subtitle">Share your BloomWire blooms on Instagram and tag @bloomwire._. Your first tag earns 25 Petals, and every tag after earns 10 Petals — redeem them for discounts, free gifts and lucky draw entries.</p>
       <div class="value-props" style="max-width:800px;margin:0 auto;">
-        <div class="value-prop"><div class="icon"><span style="font-weight:700;font-size:24px;">1</span></div><h4>Follow @bloomwire._</h4><p>(required to earn)</p></div>
-        <div class="value-prop"><div class="icon"><span style="font-weight:700;font-size:24px;">2</span></div><h4>Snap & tag</h4><p>your bloom in a reel/post</p></div>
-        <div class="value-prop"><div class="icon"><span style="font-weight:700;font-size:24px;">3</span></div><h4>Submit & earn</h4><p>we verify & credit your Petals</p></div>
+        <div class="value-prop reveal reveal-stagger-1"><div class="icon"><span style="font-weight:700;font-size:24px;">1</span></div><h4>Follow @bloomwire._</h4><p>(required to earn)</p></div>
+        <div class="value-prop reveal reveal-stagger-2"><div class="icon"><span style="font-weight:700;font-size:24px;">2</span></div><h4>Snap & tag</h4><p>your bloom in a reel/post</p></div>
+        <div class="value-prop reveal reveal-stagger-3"><div class="icon"><span style="font-weight:700;font-size:24px;">3</span></div><h4>Submit & earn</h4><p>we verify & credit your Petals</p></div>
       </div>
       <div style="text-align:center;margin-top:24px;">
         <a href="#" onclick="event.preventDefault();showToast('Sign in to earn Petals')" class="btn btn-cta">Sign In to Earn</a>
@@ -217,7 +382,7 @@
     </div>
   </section>
 
-  <section class="section" style="background:var(--evergreen);color:white;">
+  <section class="section reveal" style="background:var(--evergreen);color:white;">
     <div class="container">
       <p class="section-title" style="color:var(--gold-text);">BLOOMWIRE CREATORS</p>
       <h2 class="section-heading" style="color:white;">Join the BloomWire Creator Family</h2>
@@ -244,10 +409,10 @@
       <p class="section-title">INSIDE THE ATELIER</p>
       <h2 class="section-heading">How we handcraft each bloom</h2>
       <div class="process-steps">
-        <div class="process-step-card"><div class="process-num">01</div><h3>The wire core</h3><p>Every stem begins as a single length of pliable craft wire, cut and gauged by hand in our Jaipur studio.</p></div>
-        <div class="process-step-card"><div class="process-num">02</div><h3>The velvet weave</h3><p>Chenille fibres are wound petal by petal, layered until the bloom catches light like real velvet.</p></div>
-        <div class="process-step-card"><div class="process-num">03</div><h3>Shaping & posing</h3><p>Petals are curled, stems bent and balanced — so your flower holds any pose you give it.</p></div>
-        <div class="process-step-card"><div class="process-num">04</div><h3>The final finish</h3><p>Each piece is inspected, gently steamed, and wrapped in tissue before it ever leaves the studio.</p></div>
+        <div class="process-step-card reveal reveal-stagger-1"><div class="process-num">01</div><h3>The wire core</h3><p>Every stem begins as a single length of pliable craft wire, cut and gauged by hand in our Jaipur studio.</p></div>
+        <div class="process-step-card reveal reveal-stagger-2"><div class="process-num">02</div><h3>The velvet weave</h3><p>Chenille fibres are wound petal by petal, layered until the bloom catches light like real velvet.</p></div>
+        <div class="process-step-card reveal reveal-stagger-3"><div class="process-num">03</div><h3>Shaping & posing</h3><p>Petals are curled, stems bent and balanced — so your flower holds any pose you give it.</p></div>
+        <div class="process-step-card reveal reveal-stagger-4"><div class="process-num">04</div><h3>The final finish</h3><p>Each piece is inspected, gently steamed, and wrapped in tissue before it ever leaves the studio.</p></div>
       </div>
     </div>
   </section>
@@ -257,11 +422,11 @@
       <p class="section-title">THE SCRAPBOOK</p>
       <h2 class="section-heading">Kept, gifted, treasured</h2>
       <div class="scrapbook-grid">
-        <div class="scrapbook-card"><h4>Looks unreal in person</h4><p>I ordered the blush peony expecting something craft-like, and it arrived looking like a real garden peony. The velvet catches light beautifully. Three months on my desk and it still looks brand new.</p><div class="scrapbook-author">Ananya R. · Mumbai</div></div>
-        <div class="scrapbook-card"><h4>Best gift I've given</h4><p>Gave the sunflower bouquet to my sister for her birthday. She has it on her bedside table and keeps telling people it never needs water. Packaging was genuinely lovely too.</p><div class="scrapbook-author">Rahul M. · Delhi</div></div>
-        <div class="scrapbook-card"><h4>Perfect for an allergy home</h4><p>We can't keep fresh flowers because of my son's allergies. This little lavender pot gave us that feeling back without any of the sneezing.</p><div class="scrapbook-author">Priya S. · Bangalore</div></div>
-        <div class="scrapbook-card"><h4>The stems really do bend</h4><p>I reshaped the daisies twice to fit a narrow vase and they held every time. Feels sturdy, not flimsy.</p><div class="scrapbook-author">Sneha K. · Pune</div></div>
-        <div class="scrapbook-card"><h4>Tiny but so well made</h4><p>Bought six marigold keychains as return gifts. Every single person asked where they were from.</p><div class="scrapbook-author">Vikram T. · Hyderabad</div></div>
+        <div class="scrapbook-card reveal reveal-stagger-1"><h4>Looks unreal in person</h4><p>I ordered the blush peony expecting something craft-like, and it arrived looking like a real garden peony. The velvet catches light beautifully. Three months on my desk and it still looks brand new.</p><div class="scrapbook-author">Ananya R. · Mumbai</div></div>
+        <div class="scrapbook-card reveal reveal-stagger-2"><h4>Best gift I've given</h4><p>Gave the sunflower bouquet to my sister for her birthday. She has it on her bedside table and keeps telling people it never needs water. Packaging was genuinely lovely too.</p><div class="scrapbook-author">Rahul M. · Delhi</div></div>
+        <div class="scrapbook-card reveal reveal-stagger-3"><h4>Perfect for an allergy home</h4><p>We can't keep fresh flowers because of my son's allergies. This little lavender pot gave us that feeling back without any of the sneezing.</p><div class="scrapbook-author">Priya S. · Bangalore</div></div>
+        <div class="scrapbook-card reveal reveal-stagger-4"><h4>The stems really do bend</h4><p>I reshaped the daisies twice to fit a narrow vase and they held every time. Feels sturdy, not flimsy.</p><div class="scrapbook-author">Sneha K. · Pune</div></div>
+        <div class="scrapbook-card reveal reveal-stagger-1"><h4>Tiny but so well made</h4><p>Bought six marigold keychains as return gifts. Every single person asked where they were from.</p><div class="scrapbook-author">Vikram T. · Hyderabad</div></div>
       </div>
     </div>
   </section>
@@ -272,11 +437,11 @@
       <h2 class="section-heading">BloomWire Rewards & Petals Club</h2>
       <p class="section-subtitle">Earn Petals on every order, review and share, then redeem them for discounts, keychains and blooms. Creators get even more — free flowers, commissions and features.</p>
       <div class="rewards-grid" style="margin-bottom:32px;">
-        <div class="reward-card"><div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div><h4>Every order</h4><p>20 Petals / ₹100</p></div>
-        <div class="reward-card"><div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg></div><h4>Share a review</h4><p>+50 Petals</p></div>
-        <div class="reward-card"><div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></div><h4>Tag @bloomwire._</h4><p>+25 Petals</p></div>
-        <div class="reward-card"><div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h4>Refer a friend</h4><p>+100 Petals</p></div>
-        <div class="reward-card"><div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-8a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v8"/><path d="M4 16h16"/><path d="M12 11V7"/><path d="M12 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></svg></div><h4>Your birthday</h4><p>+100 Petals</p></div>
+        <div class="reward-card reveal reveal-stagger-1"><div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div><h4>Every order</h4><p>20 Petals / ₹100</p></div>
+        <div class="reward-card reveal reveal-stagger-2"><div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg></div><h4>Share a review</h4><p>+50 Petals</p></div>
+        <div class="reward-card reveal reveal-stagger-3"><div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></div><h4>Tag @bloomwire._</h4><p>+25 Petals</p></div>
+        <div class="reward-card reveal reveal-stagger-4"><div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h4>Refer a friend</h4><p>+100 Petals</p></div>
+        <div class="reward-card reveal reveal-stagger-1"><div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-8a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v8"/><path d="M4 16h16"/><path d="M12 11V7"/><path d="M12 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></svg></div><h4>Your birthday</h4><p>+100 Petals</p></div>
       </div>
       <div style="text-align:center;"><a href="rewards.html" class="btn btn-cta">Sign Up to Earn Today!</a></div>
     </div>
@@ -306,15 +471,15 @@
       <h2 class="section-heading">The people we bloom with</h2>
       <p class="section-subtitle">Press features, local stockists and partners who help our flowers travel further.</p>
       <div class="partners-grid">
-        <div class="partner-card"><div class="partner-type">FEATURED STUDIO</div><h4>Jaipur Art Weekly</h4><p>"The quiet future of keepsake gifting"</p></div>
-        <div class="partner-card"><div class="partner-type">STOCKIST</div><h4>Anokhi Café</h4><p>Find our stems on display, C-Scheme Jaipur</p></div>
-        <div class="partner-card"><div class="partner-type">FAVOUR PARTNER</div><h4>The Wedding Brigade</h4><p>Custom bridal favours & table blooms</p></div>
-        <div class="partner-card"><div class="partner-type">CHARITY BLOOM DROP</div><h4>Ruro Partners</h4><p>A bloom donated for every 10 sold</p></div>
+        <div class="partner-card reveal reveal-stagger-1"><div class="partner-type">FEATURED STUDIO</div><h4>Jaipur Art Weekly</h4><p>"The quiet future of keepsake gifting"</p></div>
+        <div class="partner-card reveal reveal-stagger-2"><div class="partner-type">STOCKIST</div><h4>Anokhi Café</h4><p>Find our stems on display, C-Scheme Jaipur</p></div>
+        <div class="partner-card reveal reveal-stagger-3"><div class="partner-type">FAVOUR PARTNER</div><h4>The Wedding Brigade</h4><p>Custom bridal favours & table blooms</p></div>
+        <div class="partner-card reveal reveal-stagger-4"><div class="partner-type">CHARITY BLOOM DROP</div><h4>Ruro Partners</h4><p>A bloom donated for every 10 sold</p></div>
       </div>
     </div>
   </section>
 
-  <section class="section" style="background:var(--rose-mist);padding:50px 0;">
+  <section class="section reveal" style="background:var(--rose-mist);padding:50px 0;">
     <div class="container" style="max-width:600px;text-align:center;">
       <h2 style="font-family:var(--font-heading);font-size:32px;color:var(--evergreen);margin-bottom:8px;">Join the Garden</h2>
       <p style="font-size:15px;color:hsl(var(--muted-foreground));margin-bottom:24px;">Subscribe to get ₹100 off your first order & secret bloom drops!</p>
@@ -480,6 +645,20 @@
 <button class="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">↑</button>
 <script>
 window.addEventListener('scroll',function(){var btn=document.querySelector('.scroll-top');if(btn){if(window.scrollY>400){btn.classList.add('visible')}else{btn.classList.remove('visible')}}});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+});
 </script>
 </body>
 </html>
