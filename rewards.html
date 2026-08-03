@@ -3,14 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rewards | BloomWire</title>
+  <title>Petals Rewards & Lucky Draw | BloomWire</title>
   <meta name="description" content="BloomWire — Handcrafted pipe cleaner flowers from Jaipur. Flowers that never fade.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..800;1,400..800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-</head><body>
+  <style>
+    .rewards-hero { background: var(--lavender-mist); padding: 64px 0 48px; text-align: center; }
+    .rewards-hero-card { background: white; border-radius: 16px; padding: 40px; max-width: 520px; margin: 32px auto 0; box-shadow: 0 4px 20px rgba(0,0,0,.06); text-align: center; }
+    .rewards-hero-card .icon { font-size: 48px; margin-bottom: 16px; }
+    .rewards-hero-card h3 { font-family: var(--font-heading); font-size: 22px; margin-bottom: 8px; color: var(--evergreen); }
+    .rewards-hero-card p { color: hsl(var(--muted-foreground)); font-size: 15px; margin-bottom: 20px; }
+    .petals-tiers { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 16px; }
+    .tier-card { background: white; border: 2px solid var(--border); border-radius: 12px; padding: 16px 24px; text-align: center; min-width: 160px; }
+    .tier-card.active { border-color: var(--terracotta); }
+    .tier-card h4 { font-family: var(--font-heading); font-size: 18px; margin-bottom: 4px; color: var(--evergreen); }
+    .tier-card p { font-size: 13px; color: hsl(var(--muted-foreground)); }
+    .tier-progress-bar { height: 8px; background: var(--border); border-radius: 4px; margin: 16px 0 8px; overflow: hidden; }
+    .tier-progress-fill { height: 100%; background: var(--terracotta); border-radius: 4px; width: 0%; }
+    .how-it-works { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 900px; margin: 0 auto; }
+    .how-step { background: white; border-radius: 12px; padding: 32px 24px; text-align: center; border: 1px solid var(--border); }
+    .how-step-num { width: 40px; height: 40px; border-radius: 50%; background: var(--terracotta); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; margin: 0 auto 16px; }
+    .how-step h4 { font-family: var(--font-heading); font-size: 18px; margin-bottom: 8px; color: var(--evergreen); }
+    .how-step p { font-size: 14px; color: hsl(var(--muted-foreground)); }
+    .redeem-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 900px; margin: 0 auto; }
+    .redeem-card { background: white; border-radius: 12px; padding: 24px; text-align: center; border: 1px solid var(--border); }
+    .redeem-card .icon { font-size: 36px; margin-bottom: 12px; }
+    .redeem-card h4 { font-family: var(--font-heading); font-size: 18px; margin-bottom: 4px; color: var(--evergreen); }
+    .redeem-card .petals-cost { color: var(--terracotta); font-weight: 700; font-size: 16px; margin-bottom: 8px; }
+    .redeem-card p { font-size: 13px; color: hsl(var(--muted-foreground)); margin-bottom: 16px; }
+    .redeem-card .earn-more { font-size: 13px; color: var(--terracotta); cursor: pointer; }
+    .milestone-banner { background: var(--cream); border-radius: 12px; padding: 24px; text-align: center; margin: 32px auto; max-width: 600px; border: 1px solid var(--border); }
+    .milestone-banner .label { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--terracotta); font-weight: 600; margin-bottom: 8px; }
+    .milestone-banner p { font-family: var(--font-heading); font-size: 18px; color: var(--evergreen); }
+    .rewards-section-header { text-align: left; margin-bottom: 24px; }
+    .rewards-section-header h3 { font-family: var(--font-heading); font-size: 24px; color: var(--evergreen); }
+    .rewards-status-row { display: flex; justify-content: space-between; font-size: 13px; color: hsl(var(--muted-foreground)); margin-bottom: 32px; }
+    @media (max-width: 768px) {
+      .petals-tiers { flex-direction: column; align-items: center; }
+      .how-it-works { grid-template-columns: 1fr; }
+      .redeem-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
 <div class="announcement">FREE SHIPPING ON ORDERS ABOVE ₹499 · HANDCRAFTED IN JAIPUR</div>
   <header class="header">
     <div class="header-inner">
@@ -32,53 +70,113 @@
       </div>
     </div>
   </header>
-  <section class="section" style="padding-top:48px;background:var(--lavender-mist);">
+
+  <section class="rewards-hero">
     <div class="container">
-      <p class="section-title">PETALS REWARDS</p>
-      <h1 class="section-heading">BloomWire Rewards & Petals Club</h1>
-      <p class="section-subtitle">Earn Petals on every order, review and share, then redeem them for discounts, keychains and blooms. Creators get even more — free flowers, commissions and features.</p>
-      <h3 style="font-family:var(--font-heading);font-size:22px;text-align:center;margin-bottom:24px;">Ways to Earn</h3>
-      <div class="rewards-grid" style="margin-bottom:48px;">
-        <div class="reward-card"><div class="icon">🛍️</div><h4>Every order</h4><p>20 Petals / ₹100</p></div>
-        <div class="reward-card"><div class="icon">⭐</div><h4>Share a review</h4><p>+50 Petals</p></div>
-        <div class="reward-card"><div class="icon">📸</div><h4>Tag @bloomwire._</h4><p>+25 Petals</p></div>
-        <div class="reward-card"><div class="icon">👥</div><h4>Refer a friend</h4><p>+100 Petals</p></div>
-        <div class="reward-card"><div class="icon">🎂</div><h4>Your birthday</h4><p>+100 Petals</p></div>
-      </div>
-      <h3 style="font-family:var(--font-heading);font-size:22px;text-align:center;margin-bottom:24px;">Redeem Your Petals</h3>
-      <div class="rewards-grid" style="margin-bottom:48px;">
-        <div class="reward-card" style="background:var(--cream);"><div class="icon">🎟️</div><h4>250 Petals</h4><p>→ 5% off voucher</p></div>
-        <div class="reward-card" style="background:var(--cream);"><div class="icon">🔑</div><h4>1,000 Petals</h4><p>→ free Marigold keychain</p></div>
-        <div class="reward-card" style="background:var(--cream);"><div class="icon">🌸</div><h4>2,500 Petals</h4><p>→ free single-flower stem</p></div>
-        <div class="reward-card" style="background:var(--cream);"><div class="icon">💐</div><h4>5,000 Petals</h4><p>→ ₹500 off a custom bouquet</p></div>
-      </div>
-      <div style="text-align:center;margin-bottom:48px;">
-        <a href="#" onclick="event.preventDefault();showToast('Sign in coming soon! 🌸')" class="btn btn-cta">Sign Up to Earn Today!</a>
+      <p class="section-title">✧ BLOOMWIRE PETALS</p>
+      <h1 class="section-heading">Petals Rewards & Lucky Draw</h1>
+      <p class="section-subtitle">Earn Petals for every sign-up, tag, review and referral — then trade them for discounts, free gifts and lucky draw tickets.</p>
+      <div class="rewards-hero-card">
+        <div class="icon">🌸</div>
+        <h3>Sign in to earn 25 Petals instantly!</h3>
+        <p>Create a free account and we will welcome you with 25 Petals.</p>
+        <button class="btn btn-cta" onclick="showToast('Login coming soon! 🌸')">Sign In</button>
       </div>
     </div>
   </section>
+
   <section class="section">
     <div class="container">
-      <p class="section-title">PETALS BATTLE</p>
-      <h2 class="section-heading">Collect. Compete. Celebrate.</h2>
-      <p class="section-subtitle">See Petals earned across BloomWire in real time and climb this week's leaderboard.</p>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;max-width:900px;margin:0 auto;">
-        <div>
-          <h4 style="margin-bottom:16px;font-family:var(--font-heading);">Live Petals Activity</h4>
-          <div id="petals-activity-feed"></div>
+      <div class="rewards-section-header">
+        <h3>Petals Tiers</h3>
+      </div>
+      <div class="petals-tiers">
+        <div class="tier-card active">
+          <h4>Bud</h4>
+          <p>0–499 Petals</p>
         </div>
-        <div>
-          <h4 style="margin-bottom:16px;font-family:var(--font-heading);">This Week's Top Collectors</h4>
-          <div id="leaderboard-container"></div>
+        <div class="tier-card">
+          <h4>Blossom</h4>
+          <p>500–1999 Petals</p>
+        </div>
+        <div class="tier-card">
+          <h4>Bloom</h4>
+          <p>2000–4999 Petals</p>
+        </div>
+        <div class="tier-card">
+          <h4>Petal Crown</h4>
+          <p>5000+ Petals</p>
         </div>
       </div>
-      <div style="text-align:center;margin-top:32px;">
-        <p style="color:hsl(var(--muted-foreground));">Sign in to see your rank and start earning.</p>
-        <a href="#" onclick="event.preventDefault();showToast('Sign in coming soon! 🌸')" class="btn btn-outline">Sign in →</a>
+      <div class="tier-progress-bar"><div class="tier-progress-fill"></div></div>
+      <div class="rewards-status-row">
+        <span>Current: Bud · 0 Petals</span>
+        <span>Next: Blossom at 500</span>
       </div>
     </div>
   </section>
-  <section class="section" style="background:var(--rose-mist);">
+
+  <section class="section" style="background: var(--cream);">
+    <div class="container">
+      <div class="rewards-section-header">
+        <h3>How it Works</h3>
+      </div>
+      <div class="how-it-works">
+        <div class="how-step">
+          <div class="how-step-num">1</div>
+          <h4>Earn Petals</h4>
+          <p>Shop, review, tag us and refer friends.</p>
+        </div>
+        <div class="how-step">
+          <div class="how-step-num">2</div>
+          <h4>Watch it grow</h4>
+          <p>Your balance builds up with every action.</p>
+        </div>
+        <div class="how-step">
+          <div class="how-step-num">3</div>
+          <h4>Redeem rewards</h4>
+          <p>Trade Petals for vouchers, gifts & more.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="rewards-section-header">
+        <h3>Redeem Petals</h3>
+      </div>
+      <div class="redeem-grid">
+        <div class="redeem-card">
+          <div class="icon">🎁</div>
+          <h4>₹50 off voucher</h4>
+          <div class="petals-cost">100 Petals</div>
+          <p>Apply as a coupon at checkout.</p>
+          <span class="earn-more" onclick="showToast('Sign in to earn Petals 🌸')">Earn 100 more Petals →</span>
+        </div>
+        <div class="redeem-card">
+          <div class="icon">🎁</div>
+          <h4>5% off voucher</h4>
+          <div class="petals-cost">250 Petals</div>
+          <p>Percentage discount on your order.</p>
+          <span class="earn-more" onclick="showToast('Sign in to earn Petals 🌸')">Earn 250 more Petals →</span>
+        </div>
+        <div class="redeem-card">
+          <div class="icon">🎁</div>
+          <h4>Free Marigold Keychain</h4>
+          <div class="petals-cost">500 Petals</div>
+          <p>A handcrafted keychain, on us.</p>
+          <span class="earn-more" onclick="showToast('Sign in to earn Petals 🌸')">Earn 500 more Petals →</span>
+        </div>
+      </div>
+      <div class="milestone-banner">
+        <p class="label">MILESTONE REWARD</p>
+        <p>Collect 499 Petals → free product with next order</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--rose-mist);">
     <div class="container">
       <p class="section-title">TAG & EARN</p>
       <h2 class="section-heading">Tag Us, Get Rewarded 🌸</h2>
@@ -92,7 +190,9 @@
         <a href="#" onclick="event.preventDefault();showToast('Sign in to earn Petals 🌸')" class="btn btn-cta">Sign In to Earn</a>
       </div>
     </div>
-  </section><footer class="footer">
+  </section>
+
+<footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
@@ -138,7 +238,6 @@
   </div>
   <a href="https://wa.me/916367532123" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">💬</a>
   
-  <!-- Welcome Modal -->
   <div class="welcome-modal-overlay" id="welcome-modal-overlay">
     <div class="welcome-modal">
       <button class="welcome-modal-close" onclick="closeWelcomeModal()">×</button>
@@ -154,9 +253,16 @@
   <script src="js/cart.js"></script>
   <script src="js/main.js"></script>
   <script>
+    function closeWelcomeModal() {
+      document.getElementById('welcome-modal-overlay')?.classList.remove('show');
+      sessionStorage.setItem('bloomwire_welcome_seen', '1');
+    }
     document.addEventListener('DOMContentLoaded', () => {
-      renderPetalsActivity('petals-activity-feed');
-      renderLeaderboard('leaderboard-container');
+      if (!sessionStorage.getItem('bloomwire_welcome_seen')) {
+        setTimeout(() => {
+          document.getElementById('welcome-modal-overlay')?.classList.add('show');
+        }, 1500);
+      }
     });
   </script>
 </body>
