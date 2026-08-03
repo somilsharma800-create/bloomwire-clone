@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gift Advisor | BloomWire</title>
+  <meta name="description" content="BloomWire — Handcrafted pipe cleaner flowers from Jaipur. Flowers that never fade.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..800;1,400..800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head><body>
+<div class="announcement">FREE SHIPPING ON ORDERS ABOVE ₹499 · HANDCRAFTED IN JAIPUR <span>·</span> 🌸 FLOWERS THAT NEVER FADE</div>
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">BloomWire<small>Flowers that never fade</small></a>
+      <nav class="nav-links">
+        <div class="nav-dropdown"><a href="shop.html">Shop ▾</a><div class="dropdown-menu"><a href="shop.html?category=single_flower">Single Flowers</a><a href="shop.html?category=bouquet">Bouquets</a><a href="shop.html?category=pots">Pots</a><a href="shop.html?category=keychains">Keychains</a></div></div>
+        <a href="gift-sets.html">Gift Sets</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="rewards.html">Rewards</a>
+        <a href="creator-program.html">Creator Program</a>
+      </nav>
+      <div class="nav-icons">
+        <a href="wishlist.html" title="Wishlist">❤️ <span class="wishlist-count" style="display:none;">0</span></a>
+        <a href="rewards.html" title="Petals Rewards">🌸</a>
+        <a href="cart.html" title="Cart" data-open-cart>🛒 <span class="cart-count" style="display:none;">0</span></a>
+        <button class="hamburger" aria-label="Toggle navigation">☰</button>
+      </div>
+    </div>
+  </header>
+  <section class="section" style="padding-top:48px;">
+    <div class="container">
+      <p class="section-title">AI GIFT CONCIERGE</p>
+      <h1 class="section-heading">Find the perfect handcrafted bloom</h1>
+      <p class="section-subtitle">Tell us about the moment and the person — our assistant will suggest a flower set made for them.</p>
+      <div class="gift-concierge">
+        <h3 style="font-family:var(--font-heading);margin-bottom:8px;">Gift Advisor</h3>
+        <p style="text-align:center;color:hsl(var(--muted-foreground));margin-bottom:24px;">"Every gift tells a story — let's find the bloom that tells yours."</p>
+        <div class="form-group"><label>Occasion</label><select id="ga-occasion"><option>Birthday</option><option>Anniversary</option><option>Thank You</option><option>Just Because</option><option>Wedding</option><option>Festive</option></select></div>
+        <div class="form-group"><label>Who is it for?</label><select id="ga-recipient"><option>Partner</option><option>Parent</option><option>Friend</option><option>Sibling</option><option>Colleague</option><option>Child</option></select></div>
+        <div class="form-group"><label>Their vibe</label><select id="ga-vibe"><option>Romantic</option><option>Cheerful</option><option>Elegant</option><option>Minimal</option><option>Bold</option><option>Whimsical</option></select></div>
+        <div class="form-group"><label>Budget</label><select id="ga-budget"><option>Under ₹500</option><option>₹500–1000</option><option>₹1000–2000</option><option>No limit</option></select></div>
+        <button class="btn btn-cta btn-full" onclick="findBloom()">Find my bloom</button>
+        <div id="ga-result" style="margin-top:24px;display:none;"></div>
+      </div>
+    </div>
+  </section><footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>BloomWire 🌸</h3>
+          <p>Handcrafted pipe cleaner flowers made with love in Jaipur, Rajasthan, India.</p>
+          <div class="footer-contact">
+            <p>📍 Jaipur, Rajasthan, India</p>
+            <p>📞 <a href="tel:6367532123">6367532123</a></p>
+            <p>✉️ <a href="mailto:bloomwire2000@gmail.com">bloomwire2000@gmail.com</a></p>
+            <p>📸 <a href="https://www.instagram.com/bloomwire._/" target="_blank">@bloomwire._</a></p>
+          </div>
+          <div class="footer-newsletter">
+            <input type="email" placeholder="Your email for ₹100 off">
+            <button class="btn btn-cta btn-small btn-full">Join the Garden</button>
+          </div>
+        </div>
+        <div><h4>EXPLORE</h4><ul>
+          <li><a href="shop.html">Shop</a></li><li><a href="gift-sets.html">Gift Sets</a></li>
+          <li><a href="wholesale.html">Wholesale</a></li><li><a href="faq.html">FAQ</a></li>
+          <li><a href="gallery.html">Gallery</a></li><li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li><li><a href="track-order.html">Track Order</a></li>
+        </ul></div>
+        <div><h4>POLICIES</h4><ul>
+          <li><a href="terms.html">Terms of Service</a></li><li><a href="terms.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Refund Policy</a></li><li><a href="terms.html">Shipping Policy</a></li>
+        </ul></div>
+        <div><h4>CONNECT</h4><ul>
+          <li><a href="https://www.instagram.com/bloomwire._/" target="_blank">Instagram @bloomwire._</a></li>
+          <li><a href="contact.html">Contact Studio</a></li>
+          <li><a href="rewards.html">Petals Rewards</a></li>
+          <li><a href="creator-program.html">Creator Program</a></li>
+        </ul></div>
+      </div>
+      <div class="footer-payments"><span>UPI</span><span>Visa</span><span>Mastercard</span><span>RuPay</span><span>COD</span></div>
+      <div class="footer-bottom">© 2026 BloomWire · Handcrafted with love in Jaipur, Rajasthan, India 🇮🇳</div>
+    </div>
+  </footer>
+  <div class="overlay" id="overlay"></div>
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-drawer-header"><h3>Your Cart</h3><button class="cart-drawer-close">×</button></div>
+    <div class="cart-drawer-body"></div>
+    <div class="cart-drawer-footer"></div>
+  </div>
+  <a href="https://wa.me/916367532123" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">💬</a>
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    function findBloom() {
+      const occasion = document.getElementById('ga-occasion').value;
+      const recipient = document.getElementById('ga-recipient').value;
+      const vibe = document.getElementById('ga-vibe').value;
+      const budget = document.getElementById('ga-budget').value;
+      let recs = [];
+      if (budget.includes('500') && !budget.includes('1000')) { recs = PRODUCTS.filter(p => p.price < 500); }
+      else if (budget.includes('1000')) { recs = PRODUCTS.filter(p => p.price <= 1000); }
+      else { recs = PRODUCTS; }
+      if (recs.length === 0) recs = PRODUCTS;
+      const top = recs.slice(0, 3);
+      const result = document.getElementById('ga-result');
+      result.style.display = 'block';
+      result.innerHTML = '<h4 style="font-family:var(--font-heading);margin-bottom:12px;">Perfect blooms for a ' + vibe.toLowerCase() + ' ' + occasion.toLowerCase() + ' gift:</h4>' +
+        '<div class="product-grid" style="grid-template-columns:1fr;">' + top.map(p =>
+          '<div class="product-card" onclick="window.location.href=\'product.html?id=' + p.id + '\'" style="display:flex;cursor:pointer;">' +
+          '<div style="width:100px;flex-shrink:0;"><img src="' + p.image + '" alt="' + p.name + '" style="width:100%;height:100%;object-fit:cover;"></div>' +
+          '<div class="product-card-body" style="flex:1;"><h3 style="font-size:16px;">' + p.name + '</h3><p class="product-tagline">' + p.tagline + '</p>' +
+          '<div class="product-price"><span class="current">₹' + p.price + '</span></div></div></div>'
+        ).join('') + '</div>' +
+        '<p style="text-align:center;margin-top:16px;color:hsl(var(--muted-foreground));font-style:italic;">"Every gift tells a story — let's find the bloom that tells yours."</p>';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rewards | BloomWire</title>
+  <meta name="description" content="BloomWire — Handcrafted pipe cleaner flowers from Jaipur. Flowers that never fade.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..800;1,400..800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head><body>
+<div class="announcement">FREE SHIPPING ON ORDERS ABOVE ₹499 · HANDCRAFTED IN JAIPUR <span>·</span> 🌸 FLOWERS THAT NEVER FADE</div>
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">BloomWire<small>Flowers that never fade</small></a>
+      <nav class="nav-links">
+        <div class="nav-dropdown"><a href="shop.html">Shop ▾</a><div class="dropdown-menu"><a href="shop.html?category=single_flower">Single Flowers</a><a href="shop.html?category=bouquet">Bouquets</a><a href="shop.html?category=pots">Pots</a><a href="shop.html?category=keychains">Keychains</a></div></div>
+        <a href="gift-sets.html">Gift Sets</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="rewards.html">Rewards</a>
+        <a href="creator-program.html">Creator Program</a>
+      </nav>
+      <div class="nav-icons">
+        <a href="wishlist.html" title="Wishlist">❤️ <span class="wishlist-count" style="display:none;">0</span></a>
+        <a href="rewards.html" title="Petals Rewards">🌸</a>
+        <a href="cart.html" title="Cart" data-open-cart>🛒 <span class="cart-count" style="display:none;">0</span></a>
+        <button class="hamburger" aria-label="Toggle navigation">☰</button>
+      </div>
+    </div>
+  </header>
+  <section class="section" style="padding-top:48px;background:var(--lavender-mist);">
+    <div class="container">
+      <p class="section-title">PETALS REWARDS</p>
+      <h1 class="section-heading">BloomWire Rewards & Petals Club</h1>
+      <p class="section-subtitle">Earn Petals on every order, review and share, then redeem them for discounts, keychains and blooms. Creators get even more — free flowers, commissions and features.</p>
+      <h3 style="font-family:var(--font-heading);font-size:22px;text-align:center;margin-bottom:24px;">Ways to Earn</h3>
+      <div class="rewards-grid" style="margin-bottom:48px;">
+        <div class="reward-card"><div class="icon">🛍️</div><h4>Every order</h4><p>20 Petals / ₹100</p></div>
+        <div class="reward-card"><div class="icon">⭐</div><h4>Share a review</h4><p>+50 Petals</p></div>
+        <div class="reward-card"><div class="icon">📸</div><h4>Tag @bloomwire._</h4><p>+25 Petals</p></div>
+        <div class="reward-card"><div class="icon">👥</div><h4>Refer a friend</h4><p>+100 Petals</p></div>
+        <div class="reward-card"><div class="icon">🎂</div><h4>Your birthday</h4><p>+100 Petals</p></div>
+      </div>
+      <h3 style="font-family:var(--font-heading);font-size:22px;text-align:center;margin-bottom:24px;">Redeem Your Petals</h3>
+      <div class="rewards-grid" style="margin-bottom:48px;">
+        <div class="reward-card" style="background:var(--cream);"><div class="icon">🎟️</div><h4>250 Petals</h4><p>→ 5% off voucher</p></div>
+        <div class="reward-card" style="background:var(--cream);"><div class="icon">🔑</div><h4>1,000 Petals</h4><p>→ free Marigold keychain</p></div>
+        <div class="reward-card" style="background:var(--cream);"><div class="icon">🌸</div><h4>2,500 Petals</h4><p>→ free single-flower stem</p></div>
+        <div class="reward-card" style="background:var(--cream);"><div class="icon">💐</div><h4>5,000 Petals</h4><p>→ ₹500 off a custom bouquet</p></div>
+      </div>
+      <div style="text-align:center;margin-bottom:48px;">
+        <a href="#" onclick="event.preventDefault();showToast('Sign in coming soon! 🌸')" class="btn btn-cta">Sign Up to Earn Today!</a>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <p class="section-title">PETALS BATTLE</p>
+      <h2 class="section-heading">Collect. Compete. Celebrate.</h2>
+      <p class="section-subtitle">See Petals earned across BloomWire in real time and climb this week's leaderboard.</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;max-width:900px;margin:0 auto;">
+        <div>
+          <h4 style="margin-bottom:16px;font-family:var(--font-heading);">Live Petals Activity</h4>
+          <div id="petals-activity-feed"></div>
+        </div>
+        <div>
+          <h4 style="margin-bottom:16px;font-family:var(--font-heading);">This Week's Top Collectors</h4>
+          <div id="leaderboard-container"></div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:32px;">
+        <p style="color:hsl(var(--muted-foreground));">Sign in to see your rank and start earning.</p>
+        <a href="#" onclick="event.preventDefault();showToast('Sign in coming soon! 🌸')" class="btn btn-outline">Sign in →</a>
+      </div>
+    </div>
+  </section>
+  <section class="section" style="background:var(--rose-mist);">
+    <div class="container">
+      <p class="section-title">TAG & EARN</p>
+      <h2 class="section-heading">Tag Us, Get Rewarded 🌸</h2>
+      <p class="section-subtitle">Share your BloomWire blooms on Instagram and tag @bloomwire._. Your first tag earns 25 Petals, and every tag after earns 10 Petals — redeem them for discounts, free gifts and lucky draw entries.</p>
+      <div class="value-props" style="max-width:800px;margin:0 auto;">
+        <div class="value-prop"><div class="icon">1️⃣</div><h4>Follow @bloomwire._</h4><p>(required to earn)</p></div>
+        <div class="value-prop"><div class="icon">2️⃣</div><h4>Snap & tag</h4><p>your bloom in a reel/post</p></div>
+        <div class="value-prop"><div class="icon">3️⃣</div><h4>Submit & earn</h4><p>we verify & credit your Petals</p></div>
+      </div>
+      <div style="text-align:center;margin-top:24px;">
+        <a href="#" onclick="event.preventDefault();showToast('Sign in to earn Petals 🌸')" class="btn btn-cta">Sign In to Earn</a>
+      </div>
+    </div>
+  </section><footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>BloomWire 🌸</h3>
+          <p>Handcrafted pipe cleaner flowers made with love in Jaipur, Rajasthan, India.</p>
+          <div class="footer-contact">
+            <p>📍 Jaipur, Rajasthan, India</p>
+            <p>📞 <a href="tel:6367532123">6367532123</a></p>
+            <p>✉️ <a href="mailto:bloomwire2000@gmail.com">bloomwire2000@gmail.com</a></p>
+            <p>📸 <a href="https://www.instagram.com/bloomwire._/" target="_blank">@bloomwire._</a></p>
+          </div>
+          <div class="footer-newsletter">
+            <input type="email" placeholder="Your email for ₹100 off">
+            <button class="btn btn-cta btn-small btn-full">Join the Garden</button>
+          </div>
+        </div>
+        <div><h4>EXPLORE</h4><ul>
+          <li><a href="shop.html">Shop</a></li><li><a href="gift-sets.html">Gift Sets</a></li>
+          <li><a href="wholesale.html">Wholesale</a></li><li><a href="faq.html">FAQ</a></li>
+          <li><a href="gallery.html">Gallery</a></li><li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li><li><a href="track-order.html">Track Order</a></li>
+        </ul></div>
+        <div><h4>POLICIES</h4><ul>
+          <li><a href="terms.html">Terms of Service</a></li><li><a href="terms.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Refund Policy</a></li><li><a href="terms.html">Shipping Policy</a></li>
+        </ul></div>
+        <div><h4>CONNECT</h4><ul>
+          <li><a href="https://www.instagram.com/bloomwire._/" target="_blank">Instagram @bloomwire._</a></li>
+          <li><a href="contact.html">Contact Studio</a></li>
+          <li><a href="rewards.html">Petals Rewards</a></li>
+          <li><a href="creator-program.html">Creator Program</a></li>
+        </ul></div>
+      </div>
+      <div class="footer-payments"><span>UPI</span><span>Visa</span><span>Mastercard</span><span>RuPay</span><span>COD</span></div>
+      <div class="footer-bottom">© 2026 BloomWire · Handcrafted with love in Jaipur, Rajasthan, India 🇮🇳</div>
+    </div>
+  </footer>
+  <div class="overlay" id="overlay"></div>
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-drawer-header"><h3>Your Cart</h3><button class="cart-drawer-close">×</button></div>
+    <div class="cart-drawer-body"></div>
+    <div class="cart-drawer-footer"></div>
+  </div>
+  <a href="https://wa.me/916367532123" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">💬</a>
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      renderPetalsActivity('petals-activity-feed');
+      renderLeaderboard('leaderboard-container');
+    });
+  </script>
+</body>
+</html>
