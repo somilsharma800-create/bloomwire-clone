@@ -34,9 +34,15 @@
   </header>
   <section class="section" style="padding-top:48px;">
     <div class="container">
-      <p class="section-title">FAQ</p>
+      <p class="section-title">❓ HELP</p>
       <h1 class="section-heading">Frequently Asked Questions</h1>
-      <p class="section-subtitle">Everything you need to know about BloomWire's handcrafted blooms.</p>
+      <p class="section-subtitle">Everything you need to know about ordering, delivery and caring for your bloom.</p>
+<div class="faq-tabs" style="display:flex;gap:12px;justify-content:center;margin:32px 0 24px;flex-wrap:wrap;">
+        <button class="faq-tab active" data-tab="ordering" style="padding:8px 20px;border-radius:999px;border:1px solid var(--border);background:var(--terracotta);color:white;font-size:14px;font-weight:500;cursor:pointer;">Ordering</button>
+        <button class="faq-tab" data-tab="delivery" style="padding:8px 20px;border-radius:999px;border:1px solid var(--border);background:white;color:var(--evergreen);font-size:14px;font-weight:500;cursor:pointer;">Delivery</button>
+        <button class="faq-tab" data-tab="freshness" style="padding:8px 20px;border-radius:999px;border:1px solid var(--border);background:white;color:var(--evergreen);font-size:14px;font-weight:500;cursor:pointer;">Freshness</button>
+        <button class="faq-tab" data-tab="customization" style="padding:8px 20px;border-radius:999px;border:1px solid var(--border);background:white;color:var(--evergreen);font-size:14px;font-weight:500;cursor:pointer;">Customization</button>
+      </div>
       <div class="faq-list">
         <div class="faq-item"><div class="faq-question">What are BloomWire flowers made of?</div><div class="faq-answer"><div class="faq-answer-inner">Our flowers are handcrafted from chenille wire (also known as pipe cleaners). Each petal is wound by hand from soft chenille fibre, which gives them their velvet-like texture. The stems use a flexible craft-grade wire core that bends and holds any pose.</div></div></div>
         <div class="faq-item"><div class="faq-question">Do they look realistic?</div><div class="faq-answer"><div class="faq-answer-inner">Yes! Our chenille flowers are designed to mimic real blooms. The velvet texture catches light like real petals, and many customers tell us people can't believe they aren't real flowers at first glance.</div></div></div>
@@ -128,6 +134,20 @@
 <button class="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">↑</button>
 <script>
 window.addEventListener('scroll',function(){var btn=document.querySelector('.scroll-top');if(btn){if(window.scrollY>400){btn.classList.add('visible')}else{btn.classList.remove('visible')}}});
+</script>
+<script>
+document.querySelectorAll('.faq-tab').forEach(tab => {
+  tab.addEventListener('click', function() {
+    document.querySelectorAll('.faq-tab').forEach(t => {
+      t.classList.remove('active');
+      t.style.background = 'white';
+      t.style.color = 'var(--evergreen)';
+    });
+    this.classList.add('active');
+    this.style.background = 'var(--terracotta)';
+    this.style.color = 'white';
+  });
+});
 </script>
 </body>
 </html>
