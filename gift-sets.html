@@ -46,36 +46,49 @@
         <div class="footer-brand">
           <h3>BloomWire 🌸</h3>
           <p>Handcrafted pipe cleaner flowers made with love in Jaipur, Rajasthan, India.</p>
-          <div class="footer-contact">
-            <p>📍 Jaipur, Rajasthan, India</p>
-            <p>📞 <a href="tel:6367532123">6367532123</a></p>
-            <p>✉️ <a href="mailto:bloomwire2000@gmail.com">bloomwire2000@gmail.com</a></p>
-            <p>📸 <a href="https://www.instagram.com/bloomwire._/" target="_blank">@bloomwire._</a></p>
-          </div>
-          <div class="footer-newsletter">
-            <input type="email" placeholder="Your email for ₹100 off">
-            <button class="btn btn-cta btn-small btn-full">Join the Garden</button>
+          <div class="footer-social">
+            <a href="https://wa.me/916367532123" target="_blank" aria-label="WhatsApp">💬</a>
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="https://www.instagram.com/bloomwire._/" target="_blank" aria-label="Instagram">📸</a>
+            <a href="mailto:hello@bloomwire.in" aria-label="Email">✉️</a>
           </div>
         </div>
-        <div><h4>EXPLORE</h4><ul>
+        <div><h4>SHOP</h4><ul>
           <li><a href="shop.html">Shop</a></li><li><a href="gift-sets.html">Gift Sets</a></li>
           <li><a href="wholesale.html">Wholesale</a></li><li><a href="faq.html">FAQ</a></li>
           <li><a href="gallery.html">Gallery</a></li><li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li><li><a href="track-order.html">Track Order</a></li>
+          <li><a href="contact.html">Contact</a></li><li><a href="#" onclick="event.preventDefault();showToast('Login coming soon! 🌸')">My Account</a></li>
+          <li><a href="track-order.html">Track Order</a></li>
         </ul></div>
-        <div><h4>POLICIES</h4><ul>
+        <div><h4>SUPPORT</h4><ul>
           <li><a href="terms.html">Terms of Service</a></li><li><a href="terms.html">Privacy Policy</a></li>
-          <li><a href="terms.html">Refund Policy</a></li><li><a href="terms.html">Shipping Policy</a></li>
+          <li><a href="terms.html">Refund & Return Policy</a></li><li><a href="terms.html">Shipping Policy</a></li>
+          <li><a href="terms.html">Disclaimer</a></li><li><a href="terms.html">Grievance Redressal</a></li>
         </ul></div>
-        <div><h4>CONNECT</h4><ul>
-          <li><a href="https://www.instagram.com/bloomwire._/" target="_blank">Instagram @bloomwire._</a></li>
-          <li><a href="contact.html">Contact Studio</a></li>
-          <li><a href="rewards.html">Petals Rewards</a></li>
-          <li><a href="creator-program.html">Creator Program</a></li>
-        </ul></div>
+        <div class="footer-newsletter-col">
+          <h4>NEWSLETTER</h4>
+          <p>New collections, early access and ₹100 off your first order.</p>
+          <div class="footer-newsletter-input">
+            <input type="email" placeholder="Your email">
+            <button class="newsletter-send" aria-label="Subscribe">➤</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-reach">
+        <h4>REACH US · 24×7</h4>
+        <div class="footer-reach-items">
+          <span>✉️ <a href="mailto:hello@bloomwire.in">hello@bloomwire.in</a></span>
+          <span>📍 Jaipur, Rajasthan, India</span>
+          <span>🕐 Always open, 24×7</span>
+        </div>
+      </div>
+      <div class="footer-trust-badges">
+        <span>🔒 Secure Checkout</span>
+        <span>🧾 GST Invoiced</span>
+        <span>📍 Made in India</span>
       </div>
       <div class="footer-payments"><span>UPI</span><span>Visa</span><span>Mastercard</span><span>RuPay</span><span>COD</span></div>
-      <div class="footer-bottom">© 2026 BloomWire · Handcrafted with love in Jaipur, Rajasthan, India 🇮🇳</div>
+      <div class="footer-bottom">© 2026 BloomWire. All rights reserved. Made with love in Jaipur, India 🇮🇳</div>
     </div>
   </footer>
   <div class="overlay" id="overlay"></div>
@@ -101,5 +114,9 @@
   <script src="js/products.js"></script>
   <script src="js/cart.js"></script>
   <script src="js/main.js"></script><script>document.addEventListener("DOMContentLoaded",()=>renderGiftSets("gift-sets-container"));</script>
+<button class="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">↑</button>
+<script>
+window.addEventListener('scroll',function(){var btn=document.querySelector('.scroll-top');if(btn){if(window.scrollY>400){btn.classList.add('visible')}else{btn.classList.remove('visible')}}});
+</script>
 </body>
 </html>
