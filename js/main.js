@@ -114,7 +114,7 @@ function renderProductDetail() {
         <img src="${product.image}" alt="${product.name}">
       </div>
       <div class="pdp-info">
-        ${product.sale_tag ? `<span class="pdp-badge" style="display:inline-block;padding:4px 12px;border-radius:999px;font-size:12px;font-weight:600;background:#f3e8e4;color:#8b5a4a;margin-bottom:8px;">${product.sale_tag}</span>` : ''}
+        ${product.sale_tag ? '<span class="pdp-badge" style="display:inline-block;padding:4px 12px;border-radius:999px;font-size:12px;font-weight:600;background:#f3e8e4;color:#8b5a4a;margin-bottom:8px;">' + product.sale_tag + '</span>' : ''}
         ${product.best_seller ? '<span class="pdp-badge" style="display:inline-block;padding:4px 12px;border-radius:999px;font-size:12px;font-weight:600;background:#333;color:white;margin-bottom:8px;margin-left:8px;">Best Seller</span>' : ''}
         <h1>${product.name}</h1>
         <p class="pdp-tagline">${product.tagline}</p>
