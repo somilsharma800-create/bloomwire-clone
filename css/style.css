@@ -87,7 +87,7 @@ img{max-width:100%;display:block}
 .hero-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border:1px solid hsl(var(--border));border-radius:9999px;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--evergreen);background:#fff;margin-bottom:20px}
 .hero h1{font-size:56px;line-height:1.1;font-weight:800;color:var(--evergreen);margin-bottom:16px}
 .hero h1 .italic{font-style:italic;color:var(--terracotta);font-weight:700}
-.hero-subtitle{font-family:var(--font-heading);font-size:22px;font-style:italic;color:hsl(var(--muted-foreground));margin-bottom:16px}
+.hero-subtitle{font-family:var(--font-heading);font-size:22px;font-style:italic;color:var(--sage);margin-bottom:16px}
 .hero-body{font-size:16px;color:hsl(var(--muted-foreground));line-height:1.7;max-width:480px;margin-bottom:28px}
 .hero-buttons{display:flex;gap:14px;flex-wrap:wrap}
 .hero-img-wrapper{position:relative;border-radius:24px;overflow:hidden;box-shadow:var(--premium-shadow-lg);aspect-ratio:1}
@@ -322,3 +322,40 @@ img{max-width:100%;display:block}
 @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 .cart-bounce{animation:cartBounce .4s ease}
 @keyframes cartBounce{0%,100%{transform:scale(1)}30%{transform:scale(1.2)}60%{transform:scale(.95)}}
+
+/* Welcome Modal */
+.welcome-modal-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,.5); backdrop-filter: blur(4px);
+  z-index: 10000; display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none; transition: opacity .3s ease;
+}
+.welcome-modal-overlay.show { opacity: 1; pointer-events: auto; }
+.welcome-modal {
+  background: white; border-radius: 16px; padding: 48px 40px; max-width: 480px; width: 90%;
+  text-align: center; position: relative; box-shadow: 0 20px 60px rgba(0,0,0,.15);
+  transform: translateY(20px); transition: transform .3s ease;
+}
+.welcome-modal-overlay.show .welcome-modal { transform: translateY(0); }
+.welcome-modal-close {
+  position: absolute; top: 16px; right: 16px; background: none; border: none;
+  font-size: 24px; cursor: pointer; color: var(--muted-foreground); line-height: 1;
+}
+.welcome-modal-close:hover { color: var(--foreground); }
+.welcome-modal h2 {
+  font-family: var(--font-heading); font-size: 28px; color: var(--evergreen);
+  margin: 16px 0 8px; line-height: 1.2;
+}
+.welcome-modal .welcome-eyebrow {
+  font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--terracotta); font-weight: 600;
+}
+.welcome-modal p { font-size: 15px; color: var(--muted-foreground); margin-bottom: 20px; }
+.welcome-coupon {
+  border: 2px dashed var(--terracotta); border-radius: 8px; padding: 16px;
+  margin-bottom: 24px; background: rgba(200,109,81,.05);
+}
+.welcome-coupon code {
+  font-size: 28px; font-weight: 700; color: var(--terracotta); letter-spacing: 3px;
+  font-family: var(--font-heading);
+}
+.welcome-modal .btn { width: 100%; }
