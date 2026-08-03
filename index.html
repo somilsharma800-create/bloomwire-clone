@@ -150,6 +150,91 @@
       <div class="product-grid" id="gift-sets-preview"></div>
       <div style="text-align:center;margin-top:32px;">
         <a href="gift-sets.html" class="btn btn-outline">See all gift sets</a>
+  <section class="section" style="background:var(--evergreen);color:white;text-align:center;">
+    <div class="container">
+      <p class="section-title" style="color:var(--gold-text);">INDEPENDENCE DAY · LIMITED SEASONAL EDIT</p>
+      <h2 class="section-heading" style="color:white;">Independence Day Sale — up to 15% off</h2>
+      <p style="font-size:16px;color:rgba(255,255,255,.7);max-width:600px;margin:0 auto 24px;">Our seasonal edit launches soon — handcrafted bouquets re-priced for the occasion.</p>
+      <p style="font-size:14px;letter-spacing:2px;text-transform:uppercase;color:var(--gold-text);margin-bottom:12px;">Sale starts in</p>
+      <div class="countdown" id="countdown">
+        <div class="countdown-item"><div class="countdown-value" id="cd-days">07</div><div class="countdown-label">Days</div></div>
+        <div class="countdown-item"><div class="countdown-value" id="cd-hours">01</div><div class="countdown-label">Hours</div></div>
+        <div class="countdown-item"><div class="countdown-value" id="cd-mins">35</div><div class="countdown-label">Minutes</div></div>
+        <div class="countdown-item"><div class="countdown-value" id="cd-secs">07</div><div class="countdown-label">Seconds</div></div>
+      </div>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <a href="shop.html" class="btn btn-cta">Shop the festive edit</a>
+        <a href="gift-sets.html" class="btn btn-outline" style="border-color:white;color:white;">Explore gift sets</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <p class="section-title">NOT SURE WHAT TO PICK?</p>
+      <h2 class="section-heading">Shop by Occasion</h2>
+      <p class="section-subtitle">Jump straight to a handpicked collection for the moment that matters.</p>
+      <div class="occasion-grid" style="max-width:800px;margin:0 auto;">
+        <a href="shop.html" class="occasion-card"><h4 style="margin:0;">Birthday</h4><p>Shop the collection</p></a>
+        <a href="shop.html" class="occasion-card"><h4 style="margin:0;">Anniversary</h4><p>Shop the collection</p></a>
+        <a href="shop.html" class="occasion-card"><h4 style="margin:0;">Thank You</h4><p>Shop the collection</p></a>
+        <a href="shop.html" class="occasion-card"><h4 style="margin:0;">Just Because</h4><p>Shop the collection</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--cream);">
+    <div class="container">
+      <p class="section-title">AI GIFT CONCIERGE</p>
+      <h2 class="section-heading">Find the perfect handcrafted bloom</h2>
+      <p class="section-subtitle">Tell us about the moment and the person — our assistant will suggest a flower set made for them.</p>
+      <div class="gift-concierge">
+        <h3 style="font-family:var(--font-heading);margin-bottom:8px;">Gift Advisor</h3>
+        <p style="text-align:center;color:hsl(var(--muted-foreground));margin-bottom:24px;">"Every gift tells a story — let's find the bloom that tells yours."</p>
+        <div class="form-group"><label>Occasion</label><select id="ga-occasion2"><option>Birthday</option><option>Anniversary</option><option>Thank You</option><option>Just Because</option><option>Wedding</option><option>Festive</option></select></div>
+        <div class="form-group"><label>Who is it for?</label><select id="ga-recipient2"><option>Partner</option><option>Parent</option><option>Friend</option><option>Sibling</option><option>Colleague</option><option>Child</option></select></div>
+        <div class="form-group"><label>Their vibe</label><select id="ga-vibe2"><option>Romantic</option><option>Cheerful</option><option>Elegant</option><option>Minimal</option><option>Bold</option><option>Whimsical</option></select></div>
+        <div class="form-group"><label>Budget</label><select id="ga-budget2"><option>Under ₹500</option><option>₹500-1000</option><option>₹1000-2000</option><option>No limit</option></select></div>
+        <button class="btn btn-cta btn-full" onclick="findBloom2()">Find my bloom</button>
+        <div id="ga-result2" style="margin-top:24px;display:none;"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--rose-mist);">
+    <div class="container">
+      <p class="section-title">TAG & EARN</p>
+      <h2 class="section-heading">Tag Us, Get Rewarded 🌸</h2>
+      <p class="section-subtitle">Share your BloomWire blooms on Instagram and tag @bloomwire._. Your first tag earns 25 Petals, and every tag after earns 10 Petals — redeem them for discounts, free gifts and lucky draw entries.</p>
+      <div class="value-props" style="max-width:800px;margin:0 auto;">
+        <div class="value-prop"><div class="icon">1️⃣</div><h4>Follow @bloomwire._</h4><p>(required to earn)</p></div>
+        <div class="value-prop"><div class="icon">2️⃣</div><h4>Snap & tag</h4><p>your bloom in a reel/post</p></div>
+        <div class="value-prop"><div class="icon">3️⃣</div><h4>Submit & earn</h4><p>we verify & credit your Petals</p></div>
+      </div>
+      <div style="text-align:center;margin-top:24px;">
+        <a href="#" onclick="event.preventDefault();showToast('Sign in to earn Petals 🌸')" class="btn btn-cta">Sign In to Earn</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--evergreen);color:white;">
+    <div class="container">
+      <p class="section-title" style="color:var(--gold-text);">BLOOMWIRE CREATORS</p>
+      <h2 class="section-heading" style="color:white;">Join the BloomWire Creator Family</h2>
+      <p style="font-size:16px;color:rgba(255,255,255,.7);max-width:600px;margin:0 auto 32px;">For stylists, content creators and gift enthusiasts who love everlasting blooms. Get free flowers, earn on every referral and be featured across our channels.</p>
+      <div class="creator-benefits" style="max-width:900px;margin:0 auto;">
+        <div class="creator-benefit" style="background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.1);"><div class="icon">🌸</div><h4 style="color:white;">Free monthly bloom</h4><p style="color:rgba(255,255,255,.7);">A new piece to style and share each month.</p></div>
+        <div class="creator-benefit" style="background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.1);"><div class="icon">💰</div><h4 style="color:white;">10% creator commission</h4><p style="color:rgba(255,255,255,.7);">Earn on every order via your code.</p></div>
+        <div class="creator-benefit" style="background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.1);"><div class="icon">⚡</div><h4 style="color:white;">Early access</h4><p style="color:rgba(255,255,255,.7);">Stock new collections before they go live.</p></div>
+        <div class="creator-benefit" style="background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.1);"><div class="icon">✨</div><h4 style="color:white;">Get featured</h4><p style="color:rgba(255,255,255,.7);">Your content highlighted across our channels.</p></div>
+      </div>
+      <div style="text-align:center;margin-top:32px;">
+        <a href="creator-program.html" class="btn btn-cta">Apply to Join the Creator Family</a>
+      </div>
+    </div>
+  </section>
+
+
       </div>
     </div>
   </section>
@@ -338,6 +423,48 @@
       renderPetalsActivity('petals-activity-feed');
       renderLeaderboard('leaderboard-container');
     });
+  </script>
+
+  <script>
+    // Countdown timer
+    function updateCountdown() {
+      const target = new Date('2026-08-15T00:00:00+05:30').getTime();
+      const now = new Date().getTime();
+      const diff = target - now;
+      if (diff < 0) return;
+      const days = Math.floor(diff / 86400000);
+      const hours = Math.floor((diff % 86400000) / 3600000);
+      const mins = Math.floor((diff % 3600000) / 60000);
+      const secs = Math.floor((diff % 60000) / 1000);
+      const d = document.getElementById('cd-days'); if (d) d.textContent = String(days).padStart(2,'0');
+      const h = document.getElementById('cd-hours'); if (h) h.textContent = String(hours).padStart(2,'0');
+      const m = document.getElementById('cd-mins'); if (m) m.textContent = String(mins).padStart(2,'0');
+      const s = document.getElementById('cd-secs'); if (s) s.textContent = String(secs).padStart(2,'0');
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+    
+    // Gift advisor on homepage
+    function findBloom2() {
+      const occasion = document.getElementById('ga-occasion2').value;
+      const vibe = document.getElementById('ga-vibe2').value;
+      const budget = document.getElementById('ga-budget2').value;
+      let recs = [];
+      if (budget.includes('500') && !budget.includes('1000')) { recs = PRODUCTS.filter(p => p.price < 500); }
+      else if (budget.includes('1000')) { recs = PRODUCTS.filter(p => p.price <= 1000); }
+      else { recs = PRODUCTS; }
+      if (recs.length === 0) recs = PRODUCTS;
+      const top = recs.slice(0, 3);
+      const result = document.getElementById('ga-result2');
+      result.style.display = 'block';
+      result.innerHTML = '<h4 style="font-family:var(--font-heading);margin-bottom:12px;">Perfect blooms for a ' + vibe.toLowerCase() + ' ' + occasion.toLowerCase() + ' gift:</h4>' +
+        '<div class="product-grid" style="grid-template-columns:1fr;">' + top.map(p =>
+          '<div class="product-card" onclick="window.location.href=\'product.html?id=' + p.id + '\'" style="display:flex;cursor:pointer;">' +
+          '<div style="width:100px;flex-shrink:0;"><img src="' + p.image + '" alt="' + p.name + '" style="width:100%;height:100%;object-fit:cover;"></div>' +
+          '<div class="product-card-body" style="flex:1;"><h3 style="font-size:16px;">' + p.name + '</h3><p class="product-tagline">' + p.tagline + '</p>' +
+          '<div class="product-price"><span class="current">₹' + p.price + '</span></div></div></div>'
+        ).join('') + '</div>';
+    }
   </script>
 </body>
 </html>
