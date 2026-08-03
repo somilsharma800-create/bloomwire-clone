@@ -107,17 +107,19 @@ function renderProductDetail() {
   const discount = Math.round((1 - product.price / product.mrp) * 100);
   const isWished = isInWishlist(product.id);
   container.innerHTML = `
-    <div class="breadcrumbs"><a href="index.html">Home</a> <span>/</span> <a href="shop.html">Shop</a> <span>/</span> ${product.name}</div>
+    <div class="breadcrumbs"><a href="index.html">Home</a> <span>/</span> <a href="shop.html">Shop</a> <span>/</span> <a href="shop.html?category=${product.category}">${product.category.replace('_', ' ').replace(/^\w/, c => c.toUpperCase())}</a> <span>/</span> ${product.name}</div>
     <div class="pdp">
       <div class="pdp-image">
         <button class="wishlist-btn ${isWished ? 'active' : ''}" data-id="${product.id}" onclick="toggleWishlist('${product.id}', event)" style="position:absolute;top:16px;right:16px;z-index:2;font-size:22px;background:rgba(255,255,255,.9);border-radius:50%;width:44px;height:44px;">${isWished ? '❤️' : '🤍'}</button>
         <img src="${product.image}" alt="${product.name}">
       </div>
       <div class="pdp-info">
+        ${product.sale_tag ? `<span class="pdp-badge" style="display:inline-block;padding:4px 12px;border-radius:999px;font-size:12px;font-weight:600;background:#f3e8e4;color:#8b5a4a;margin-bottom:8px;">${product.sale_tag}</span>` : ''}
+        ${product.best_seller ? '<span class="pdp-badge" style="display:inline-block;padding:4px 12px;border-radius:999px;font-size:12px;font-weight:600;background:#333;color:white;margin-bottom:8px;margin-left:8px;">Best Seller</span>' : ''}
         <h1>${product.name}</h1>
         <p class="pdp-tagline">${product.tagline}</p>
         <div class="pdp-rating"><span class="pdp-stars">★★★★★</span> <span>5.0 (8 reviews)</span></div>
-        <div class="pdp-price"><span class="current">₹${product.price}</span><span class="original">₹${product.mrp}</span><span class="badge">Save ₹${savings} (${discount}% off)</span></div>
+        <div class="pdp-price"><span class="current">₹${product.price}</span><span class="original">₹${product.mrp}</span><span class="badge">Save ₹${savings} (${discount}% off)</span><div style="font-size:12px;color:var(--sage);margin-top:4px;">Incl. GST · Origin: ${product.origin}</div></div>
         <div class="pdp-petals">🌸 Earn <strong>${product.petals} Petals</strong> with this purchase</div>
         <p style="font-size:15px;color:hsl(var(--muted-foreground));margin-bottom:24px;line-height:1.7;">${product.description}</p>
         <div class="pdp-qty"><span>Quantity:</span><div class="qty-control"><button onclick="changeQty(-1)">−</button><input type="text" id="pdp-qty" value="1" readonly><button onclick="changeQty(1)">+</button></div></div>
